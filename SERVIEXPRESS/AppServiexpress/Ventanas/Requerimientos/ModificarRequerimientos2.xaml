@@ -1,0 +1,47 @@
+﻿<Window x:Class="AppServiexpress.Ventanas.Requerimientos.ModificarRequerimientos2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress.Ventanas.Requerimientos"
+        mc:Ignorable="d"
+        Title="Modificar Requerimiento" Height="650" Width="1078" Icon="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_icono2.png" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,2,0">
+        <Grid.Background>
+            <SolidColorBrush Color="#FF1834E6" Opacity="0.3"/>
+        </Grid.Background>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="589" Margin="90,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="802"/>
+        <Grid Margin="113,35,176,20">
+            <Image HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="147" Source="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_logo.png"/>
+            <Label Content="ORDEN DE TRABAJO" HorizontalAlignment="Left" Margin="323,42,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="151"/>
+            <Label Content="FOLIO:" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="54" RenderTransformOrigin="0.509,0.577"/>
+            <TextBox x:Name="txtFolio" Text="00000000" HorizontalAlignment="Left" Height="26"  Width="70" Margin="685,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" MaxLength="9" IsReadOnly="True" TextAlignment="Right" />
+            <Label Content="Cliente:" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Patente Vehiculo:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Fecha Reserva:" HorizontalAlignment="Left" Margin="244,118,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.509,0.577"/>
+            <DatePicker x:Name="dpkFechaCreacion" HorizontalAlignment="Left" Margin="336,118,0,0" VerticalAlignment="Top" Height="26"  Width="168" />
+            <Label Content="Fecha Salida:" HorizontalAlignment="Left" Margin="514,118,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.509,0.577"/>
+            <DatePicker x:Name="dpkFechaActualizacion" HorizontalAlignment="Left" Margin="597,118,0,0" VerticalAlignment="Top" Height="26"  Width="168" />
+            <Label Content="Empleado Recepcion:" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="129" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Sucursal:" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.509,0.577"/>
+            <DataGrid x:Name="dgServicios" HorizontalAlignment="Left" Height="108" Margin="2,240,0,0" VerticalAlignment="Top" Width="767" MaxWidth="767" />
+            <Label Content="Servicios Solicitados" HorizontalAlignment="Left" Margin="2,214,0,0" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.509,0.577" FontWeight="Bold"/>
+            <DataGrid x:Name="dgProductos" HorizontalAlignment="Left" Height="108" Margin="0,379,0,0" VerticalAlignment="Top" Width="767" MaxWidth="767" />
+            <Label Content="Productos Solicitados" HorizontalAlignment="Left" Margin="0,353,0,0" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.509,0.577" FontWeight="Bold"/>
+            <Label Content="Observacion:" HorizontalAlignment="Left" Margin="2,492,0,0" VerticalAlignment="Top" Width="85" RenderTransformOrigin="0.509,0.577"/>
+            <TextBox x:Name="txtObservacion" HorizontalAlignment="Left" Height="47"  Width="678" Margin="87,492,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" MaxLength="280" />
+            <TextBox x:Name="txtNombreCliente" HorizontalAlignment="Left" Height="26"  Width="694" Margin="71,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" IsReadOnly="true" MaxLength="280" />
+            <TextBox x:Name="txtSucursal" HorizontalAlignment="Left" Height="26"  Width="694" Margin="71,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" IsReadOnly="true" MaxLength="280" />
+            <TextBox x:Name="txtNombreEmpleado" HorizontalAlignment="Left" Height="26"  Width="629" Margin="136,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" IsReadOnly="true" MaxLength="280" />
+            <Label x:Name="lblidOrdentrabajo" Content="" HorizontalAlignment="Left" Margin="675,53,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.509,0.577" Visibility="Hidden"/>
+            <TextBox x:Name="txtPatente" HorizontalAlignment="Left" Height="26"  Width="128" Margin="111,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" IsReadOnly="true" MaxLength="280" />
+        </Grid>
+        <Button x:Name="btnAgregaProducto" Content="Agregar Productos" HorizontalAlignment="Left" Margin="917,157,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnAgregaProducto_Click"  />
+        <Button x:Name="btnAgregarServicio" Content="Agregar Servicios" HorizontalAlignment="Left" Margin="917,95,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnAgregarServicio_Click" />
+        <Button x:Name="btnQuitarServicio" Content="Quitar Servicios" HorizontalAlignment="Left" Margin="917,126,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnQuitarServicio_Click"  />
+        <Button x:Name="btnExportar" Content="Exportar PDF" HorizontalAlignment="Left" Margin="917,10,0,0" VerticalAlignment="Top" Width="123" Height="26" Foreground="White" Background="#FFCD3838" Click="btnExportar_Click" />
+        <Button x:Name="btnGuadar" Content="Guardar Cambios" HorizontalAlignment="Left" Margin="917,353,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnGuadar_Click"  />
+        <Button x:Name="btnEliminar" Content="Eliminar Orden" HorizontalAlignment="Left" Margin="917,434,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnEliminar_Click"/>
+        <Button x:Name="btnActualizarServicio" Content="Actualizar Servicio" HorizontalAlignment="Left" Margin="917,240,0,0" VerticalAlignment="Top" Width="123" Height="36" Click="btnActualizarServicio_Click"  />
+    </Grid>
+</Window>

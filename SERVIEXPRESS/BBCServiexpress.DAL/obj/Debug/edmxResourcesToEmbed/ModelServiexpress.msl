@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelServiexpressStoreContainer" CdmEntityContainer="EntitiesServiexpress">
+    <EntitySetMapping Name="ANULACION_VENTA">
+      <EntityTypeMapping TypeName="ModelServiexpress.ANULACION_VENTA">
+        <MappingFragment StoreEntitySet="ANULACION_VENTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="FECHA_ANULACION" ColumnName="FECHA_ANULACION" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="VENTAS_ID" ColumnName="VENTAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIA">
+      <EntityTypeMapping TypeName="ModelServiexpress.CATEGORIA">
+        <MappingFragment StoreEntitySet="CATEGORIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="ModelServiexpress.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="ESTADO_CLIENTE_ID" ColumnName="ESTADO_CLIENTE_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMUNA">
+      <EntityTypeMapping TypeName="ModelServiexpress.COMUNA">
+        <MappingFragment StoreEntitySet="COMUNA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PROVINCIA_ID" ColumnName="PROVINCIA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTROL_RECEPCION">
+      <EntityTypeMapping TypeName="ModelServiexpress.CONTROL_RECEPCION">
+        <MappingFragment StoreEntitySet="CONTROL_RECEPCION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="FECHA_APROVACION" ColumnName="FECHA_APROVACION" />
+          <ScalarProperty Name="FECHA_RECEPCION" ColumnName="FECHA_RECEPCION" />
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="ESTADO_CONTROL_RECEPCION_ID" ColumnName="ESTADO_CONTROL_RECEPCION_ID" />
+          <ScalarProperty Name="ORDEN_PEDIDO_ID" ColumnName="ORDEN_PEDIDO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_ANULACION_VENTA">
+      <EntityTypeMapping TypeName="ModelServiexpress.DETALLE_ANULACION_VENTA">
+        <MappingFragment StoreEntitySet="DETALLE_ANULACION_VENTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="ANULACION_VENTA_ID" ColumnName="ANULACION_VENTA_ID" />
+          <ScalarProperty Name="MULTI_MONEDA_ID" ColumnName="MULTI_MONEDA_ID" />
+          <ScalarProperty Name="PRODUCTO_ID" ColumnName="PRODUCTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_CONTROL_RECEPCION">
+      <EntityTypeMapping TypeName="ModelServiexpress.DETALLE_CONTROL_RECEPCION">
+        <MappingFragment StoreEntitySet="DETALLE_CONTROL_RECEPCION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CANTIDAD_INGRESADA" ColumnName="CANTIDAD_INGRESADA" />
+          <ScalarProperty Name="CANTIDAD_TOTAL" ColumnName="CANTIDAD_TOTAL" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="CONTROL_RECEPCION_ID" ColumnName="CONTROL_RECEPCION_ID" />
+          <ScalarProperty Name="ESTADO_RECEPCION_ID" ColumnName="ESTADO_RECEPCION_ID" />
+          <ScalarProperty Name="MULTI_MONEDA_ID" ColumnName="MULTI_MONEDA_ID" />
+          <ScalarProperty Name="PRODUCTO_ID" ColumnName="PRODUCTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="ModelServiexpress.DETALLE_ORDEN_PEDIDO">
+        <MappingFragment StoreEntitySet="DETALLE_ORDEN_PEDIDO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="MULTI_MONEDA_ID" ColumnName="MULTI_MONEDA_ID" />
+          <ScalarProperty Name="ORDEN_PEDIDO_ID" ColumnName="ORDEN_PEDIDO_ID" />
+          <ScalarProperty Name="PRODUCTO_ID" ColumnName="PRODUCTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_VENTAS">
+      <EntityTypeMapping TypeName="ModelServiexpress.DETALLE_VENTAS">
+        <MappingFragment StoreEntitySet="DETALLE_VENTAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="MULTI_MONEDA_ID" ColumnName="MULTI_MONEDA_ID" />
+          <ScalarProperty Name="PRODUCTO_ID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="SERVICIO_ID" ColumnName="SERVICIO_ID" />
+          <ScalarProperty Name="VENTAS_ID" ColumnName="VENTAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIAGNOSTICO">
+      <EntityTypeMapping TypeName="ModelServiexpress.DIAGNOSTICO">
+        <MappingFragment StoreEntitySet="DIAGNOSTICO">
+          <ScalarProperty Name="ESTADO_DIAGNOSTICO" ColumnName="ESTADO_DIAGNOSTICO" />
+          <ScalarProperty Name="VALOR_FINAL" ColumnName="VALOR_FINAL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="RESERVA_HORA_ID" ColumnName="RESERVA_HORA_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="ModelServiexpress.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="ESTADO_EMPLEADO_ID" ColumnName="ESTADO_EMPLEADO_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+          <ScalarProperty Name="TIPO_EMPLEADO_ID" ColumnName="TIPO_EMPLEADO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_CLIENTE">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_CLIENTE">
+        <MappingFragment StoreEntitySet="ESTADO_CLIENTE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_CONTROL_RECEPCION">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_CONTROL_RECEPCION">
+        <MappingFragment StoreEntitySet="ESTADO_CONTROL_RECEPCION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_EMPLEADO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_EMPLEADO">
+        <MappingFragment StoreEntitySet="ESTADO_EMPLEADO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_EMPRESA">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_EMPRESA">
+        <MappingFragment StoreEntitySet="ESTADO_EMPRESA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_ORDEN_PEDIDO">
+        <MappingFragment StoreEntitySet="ESTADO_ORDEN_PEDIDO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_PERSONA">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_PERSONA">
+        <MappingFragment StoreEntitySet="ESTADO_PERSONA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_PRODUCTO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_PRODUCTO">
+        <MappingFragment StoreEntitySet="ESTADO_PRODUCTO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_PROVEEDOR">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_PROVEEDOR">
+        <MappingFragment StoreEntitySet="ESTADO_PROVEEDOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_RECEPCION">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_RECEPCION">
+        <MappingFragment StoreEntitySet="ESTADO_RECEPCION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_RESERVA">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_RESERVA">
+        <MappingFragment StoreEntitySet="ESTADO_RESERVA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_SERVICIO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_SERVICIO">
+        <MappingFragment StoreEntitySet="ESTADO_SERVICIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_SUCURSAL">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_SUCURSAL">
+        <MappingFragment StoreEntitySet="ESTADO_SUCURSAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_USUARIO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_USUARIO">
+        <MappingFragment StoreEntitySet="ESTADO_USUARIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCA">
+      <EntityTypeMapping TypeName="ModelServiexpress.MARCA">
+        <MappingFragment StoreEntitySet="MARCA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCA_VEHICULO">
+      <EntityTypeMapping TypeName="ModelServiexpress.MARCA_VEHICULO">
+        <MappingFragment StoreEntitySet="MARCA_VEHICULO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MULTI_EMPRESA">
+      <EntityTypeMapping TypeName="ModelServiexpress.MULTI_EMPRESA">
+        <MappingFragment StoreEntitySet="MULTI_EMPRESA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="NUMERO_TELEFONO" ColumnName="NUMERO_TELEFONO" />
+          <ScalarProperty Name="RAZON_SOCIAL" ColumnName="RAZON_SOCIAL" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="ESTADO_EMPRESA_ID" ColumnName="ESTADO_EMPRESA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MULTI_MONEDA">
+      <EntityTypeMapping TypeName="ModelServiexpress.MULTI_MONEDA">
+        <MappingFragment StoreEntitySet="MULTI_MONEDA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="FECHA_CAMBIO" ColumnName="FECHA_CAMBIO" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="TIPO_MODONEDA" ColumnName="TIPO_MODONEDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ORDEN_PEDIDO">
+        <MappingFragment StoreEntitySet="ORDEN_PEDIDO">
+          <ScalarProperty Name="EMAIL_SUCURSAL" ColumnName="EMAIL_SUCURSAL" />
+          <ScalarProperty Name="EMAIL_PROVEEDOR" ColumnName="EMAIL_PROVEEDOR" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CANTIDAD_TOTAL" ColumnName="CANTIDAD_TOTAL" />
+          <ScalarProperty Name="FECHA_ENTREGA" ColumnName="FECHA_ENTREGA" />
+          <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="ESTADO_ORDEN_PEDIDO_ID" ColumnName="ESTADO_ORDEN_PEDIDO_ID" />
+          <ScalarProperty Name="MULTI_MONEDA_ID" ColumnName="MULTI_MONEDA_ID" />
+          <ScalarProperty Name="PROVEEDOR_ID" ColumnName="PROVEEDOR_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+          <ScalarProperty Name="TIPO_ORDEN_PEDIDO_ID" ColumnName="TIPO_ORDEN_PEDIDO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAIS">
+      <EntityTypeMapping TypeName="ModelServiexpress.PAIS">
+        <MappingFragment StoreEntitySet="PAIS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONA">
+      <EntityTypeMapping TypeName="ModelServiexpress.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="DIV_ID" ColumnName="DIV_ID" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="NUM_ID" ColumnName="NUM_ID" />
+          <ScalarProperty Name="TELEFONO_CELULAR" ColumnName="TELEFONO_CELULAR" />
+          <ScalarProperty Name="TELEFONO_FIJO" ColumnName="TELEFONO_FIJO" />
+          <ScalarProperty Name="COMUNA_ID" ColumnName="COMUNA_ID" />
+          <ScalarProperty Name="ESTADO_PERSONA_ID" ColumnName="ESTADO_PERSONA_ID" />
+          <ScalarProperty Name="TIPO_PERSONA_ID" ColumnName="TIPO_PERSONA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="ModelServiexpress.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="TIPO_PRODUCTO" ColumnName="TIPO_PRODUCTO" />
+          <ScalarProperty Name="ID_PROVEERDOR" ColumnName="ID_PROVEERDOR" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO" ColumnName="FECHA_VENCIMIENTO" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="STOCK_CRITICO" ColumnName="STOCK_CRITICO" />
+          <ScalarProperty Name="CATEGORIA_ID" ColumnName="CATEGORIA_ID" />
+          <ScalarProperty Name="ESTADO_PRODUCTO_ID" ColumnName="ESTADO_PRODUCTO_ID" />
+          <ScalarProperty Name="MARCA_ID" ColumnName="MARCA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR">
+      <EntityTypeMapping TypeName="ModelServiexpress.PROVEEDOR">
+        <MappingFragment StoreEntitySet="PROVEEDOR">
+          <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="ESTADO_PROVEEDOR_ID" ColumnName="ESTADO_PROVEEDOR_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+          <ScalarProperty Name="TIPO_PROVEEDOR_ID" ColumnName="TIPO_PROVEEDOR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIA">
+      <EntityTypeMapping TypeName="ModelServiexpress.PROVINCIA">
+        <MappingFragment StoreEntitySet="PROVINCIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGION">
+      <EntityTypeMapping TypeName="ModelServiexpress.REGION">
+        <MappingFragment StoreEntitySet="REGION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PAIS_ID" ColumnName="PAIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA_HORA">
+      <EntityTypeMapping TypeName="ModelServiexpress.RESERVA_HORA">
+        <MappingFragment StoreEntitySet="RESERVA_HORA">
+          <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+          <ScalarProperty Name="ORSERVACION_FINAL" ColumnName="ORSERVACION_FINAL" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="ESTADO_RESERVA_ID" ColumnName="ESTADO_RESERVA_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+          <ScalarProperty Name="TIPO_RESERVA_ID" ColumnName="TIPO_RESERVA_ID" />
+          <ScalarProperty Name="VEHICULO_ID" ColumnName="VEHICULO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO">
+      <EntityTypeMapping TypeName="ModelServiexpress.SERVICIO">
+        <MappingFragment StoreEntitySet="SERVICIO">
+          <ScalarProperty Name="COSTO" ColumnName="COSTO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="ESTADO_SERVICIO_ID" ColumnName="ESTADO_SERVICIO_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+          <ScalarProperty Name="TIPO_SERVICIO_ID" ColumnName="TIPO_SERVICIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUCURSAL">
+      <EntityTypeMapping TypeName="ModelServiexpress.SUCURSAL">
+        <MappingFragment StoreEntitySet="SUCURSAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="NUMERO_TELEFONO" ColumnName="NUMERO_TELEFONO" />
+          <ScalarProperty Name="ESTADO_SUCURSAL_ID" ColumnName="ESTADO_SUCURSAL_ID" />
+          <ScalarProperty Name="MULTI_EMPRESA_ID" ColumnName="MULTI_EMPRESA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_EMPLEADO">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_EMPLEADO">
+        <MappingFragment StoreEntitySet="TIPO_EMPLEADO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_ORDEN_PEDIDO">
+        <MappingFragment StoreEntitySet="TIPO_ORDEN_PEDIDO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_PERSONA">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_PERSONA">
+        <MappingFragment StoreEntitySet="TIPO_PERSONA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_PROVEEDOR">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_PROVEEDOR">
+        <MappingFragment StoreEntitySet="TIPO_PROVEEDOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_RESERVA">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_RESERVA">
+        <MappingFragment StoreEntitySet="TIPO_RESERVA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_SERVICIO">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_SERVICIO">
+        <MappingFragment StoreEntitySet="TIPO_SERVICIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_USUARIO">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_USUARIO">
+        <MappingFragment StoreEntitySet="TIPO_USUARIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_VEHICULO">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_VEHICULO">
+        <MappingFragment StoreEntitySet="TIPO_VEHICULO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_VENTA">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_VENTA">
+        <MappingFragment StoreEntitySet="TIPO_VENTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="ModelServiexpress.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CONTRACENA" ColumnName="CONTRACENA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ESTADO_USUARIO_ID" ColumnName="ESTADO_USUARIO_ID" />
+          <ScalarProperty Name="PERSONA_ID" ColumnName="PERSONA_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+          <ScalarProperty Name="TIPO_USUARIO_ID" ColumnName="TIPO_USUARIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEHICULO">
+      <EntityTypeMapping TypeName="ModelServiexpress.VEHICULO">
+        <MappingFragment StoreEntitySet="VEHICULO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="PATENTE" ColumnName="PATENTE" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="MARCA_VEHICULO_ID" ColumnName="MARCA_VEHICULO_ID" />
+          <ScalarProperty Name="TIPO_VEHICULO_ID" ColumnName="TIPO_VEHICULO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTAS">
+      <EntityTypeMapping TypeName="ModelServiexpress.VENTAS">
+        <MappingFragment StoreEntitySet="VENTAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ULTIMO_UPDATE" ColumnName="FECHA_ULTIMO_UPDATE" />
+          <ScalarProperty Name="CANTIDAD_TOTAL" ColumnName="CANTIDAD_TOTAL" />
+          <ScalarProperty Name="FECHA_VENTA" ColumnName="FECHA_VENTA" />
+          <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
+          <ScalarProperty Name="MULTI_MONEDA_ID" ColumnName="MULTI_MONEDA_ID" />
+          <ScalarProperty Name="SUCURSAL_ID" ColumnName="SUCURSAL_ID" />
+          <ScalarProperty Name="TIPO_VENTA_ID" ColumnName="TIPO_VENTA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_PRODUCTO">
+      <EntityTypeMapping TypeName="ModelServiexpress.TIPO_PRODUCTO">
+        <MappingFragment StoreEntitySet="TIPO_PRODUCTO">
+          <ScalarProperty Name="CATEGORIA_ID" ColumnName="CATEGORIA_ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_SERVICIO_X_DIAGNOSTICO">
+      <EntityTypeMapping TypeName="ModelServiexpress.ESTADO_SERVICIO_X_DIAGNOSTICO">
+        <MappingFragment StoreEntitySet="ESTADO_SERVICIO_X_DIAGNOSTICO">
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_ESTADO_SXD" ColumnName="ID_ESTADO_SXD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTOS_X_DIAGNOSTICO">
+      <EntityTypeMapping TypeName="ModelServiexpress.PRODUCTOS_X_DIAGNOSTICO">
+        <MappingFragment StoreEntitySet="PRODUCTOS_X_DIAGNOSTICO">
+          <ScalarProperty Name="CANTIDAD_PROD" ColumnName="CANTIDAD_PROD" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+          <ScalarProperty Name="ID_PXD" ColumnName="ID_PXD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIOS_X_DIAGNOSTICO">
+      <EntityTypeMapping TypeName="ModelServiexpress.SERVICIOS_X_DIAGNOSTICO">
+        <MappingFragment StoreEntitySet="SERVICIOS_X_DIAGNOSTICO">
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_SERVICIO" ColumnName="ID_SERVICIO" />
+          <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+          <ScalarProperty Name="ID_SXD" ColumnName="ID_SXD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

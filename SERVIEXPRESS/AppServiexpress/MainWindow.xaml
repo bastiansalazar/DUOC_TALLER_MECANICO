@@ -1,0 +1,25 @@
+﻿<Window x:Name="InicioSesion" x:Class="AppServiexpress.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress"
+        mc:Ignorable="d"
+        Title="Iniciar Sesión" WindowStartupLocation="CenterScreen"  Icon="Contenidos/Imagenes/Serviexpress_icono2.png" Height="701" Width="697.5">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Contenidos/Imagenes/login-fondo.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="289" Margin="222,259,0,0" VerticalAlignment="Top" Width="273" Stroke="White">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.6"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lbl1" Content="Usuario" HorizontalAlignment="Right" Margin="0,0,311,356" VerticalAlignment="Bottom" Width="106" Foreground="white" FontSize="22" FontWeight="Bold" />
+        <Label x:Name="lbl2" Content="Clave" HorizontalAlignment="Right" Margin="0,0,311,268" VerticalAlignment="Bottom" Width="106" Foreground="white" FontSize="22" FontWeight="Bold"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Right" Height="38" Margin="0,0,243,312" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="174" FontSize="22" />
+        <PasswordBox x:Name="txtClave" HorizontalAlignment="Right" Margin="0,0,243,224" VerticalAlignment="Bottom"  Height="38" Width="174" FontSize="22" />
+        <Button x:Name="btnEntrar" Content="Entrar" HorizontalAlignment="Right" Margin="0,0,243,154" VerticalAlignment="Bottom" Height="38" Width="174" FontSize="22" FontWeight="Bold" Background="#FF001D7B" BorderBrush="White" Foreground="White" Click="btnEntrar_Click"/>
+        <Image x:Name="img1" HorizontalAlignment="Left" Height="160" Margin="121,70,0,0" VerticalAlignment="Top" Width="456" Source="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_logo.png" Stretch="UniformToFill"/>
+    </Grid>
+</Window>

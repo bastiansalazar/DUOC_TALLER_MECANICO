@@ -1,0 +1,1827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelServiexpress.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ANULACION_VENTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="FECHA_ANULACION" Type="date" />
+    <Property Name="MOTIVO" Type="varchar2" MaxLength="200" />
+    <Property Name="CLIENTE_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="VENTAS_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATEGORIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="ESTADO_CLIENTE_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PERSONA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMUNA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PROVINCIA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTROL_RECEPCION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="COMENTARIO" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_APROVACION" Type="date" />
+    <Property Name="FECHA_RECEPCION" Type="date" />
+    <Property Name="EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ESTADO_CONTROL_RECEPCION_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ORDEN_PEDIDO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_ANULACION_VENTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CANTIDAD" Type="number" Precision="10" Scale="0" />
+    <Property Name="NOMBRE_PRODUCTO" Type="varchar2" MaxLength="50" />
+    <Property Name="OBSERVACION" Type="varchar2" MaxLength="200" />
+    <Property Name="PRECIO_VENTA" Type="float" Precision="126" Scale="0" />
+    <Property Name="ANULACION_VENTA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MULTI_MONEDA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_CONTROL_RECEPCION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CANTIDAD_INGRESADA" Type="number" Precision="10" Scale="0" />
+    <Property Name="CANTIDAD_TOTAL" Type="number" Precision="10" Scale="0" />
+    <Property Name="COMENTARIO" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE_PRODUCTO" Type="varchar2" MaxLength="50" />
+    <Property Name="PRECIO_COMPRA" Type="float" Precision="126" Scale="0" />
+    <Property Name="CONTROL_RECEPCION_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ESTADO_RECEPCION_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MULTI_MONEDA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_ORDEN_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CANTIDAD" Type="number" Precision="10" Scale="0" />
+    <Property Name="MONTO_TOTAL" Type="float" Precision="126" Scale="0" />
+    <Property Name="NOMBRE_PRODUCTO" Type="varchar2" MaxLength="50" />
+    <Property Name="PRECIO_COMPRA" Type="float" Precision="126" Scale="0" />
+    <Property Name="MULTI_MONEDA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ORDEN_PEDIDO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_VENTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CANTIDAD" Type="number" Precision="10" Scale="0" />
+    <Property Name="MONTO_TOTAL" Type="float" Precision="126" Scale="0" />
+    <Property Name="NOMBRE_PRODUCTO" Type="varchar2" MaxLength="50" />
+    <Property Name="PRECIO_VENTA" Type="float" Precision="126" Scale="0" />
+    <Property Name="MULTI_MONEDA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SERVICIO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="VENTAS_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DIAGNOSTICO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="RESERVA_HORA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="VALOR_FINAL" Type="number" Precision="38" Scale="0" />
+    <Property Name="ESTADO_DIAGNOSTICO" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="ESTADO_EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PERSONA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_CLIENTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_CONTROL_RECEPCION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_EMPLEADO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_EMPRESA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_ORDEN_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_PERSONA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_RECEPCION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_RESERVA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_SERVICIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_SERVICIO_X_DIAGNOSTICO">
+    <Key>
+      <PropertyRef Name="ID_ESTADO_SXD" />
+    </Key>
+    <Property Name="ID_ESTADO_SXD" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ESTADO_SUCURSAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MARCA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MARCA_VEHICULO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MULTI_EMPRESA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NUMERO_TELEFONO" Type="number" Precision="10" Scale="0" />
+    <Property Name="RAZON_SOCIAL" Type="varchar2" MaxLength="100" />
+    <Property Name="RUT" Type="varchar2" MaxLength="15" />
+    <Property Name="ESTADO_EMPRESA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MULTI_MONEDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="FECHA_CAMBIO" Type="date" />
+    <Property Name="MONTO" Type="float" Precision="126" Scale="0" />
+    <Property Name="TIPO_MODONEDA" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ORDEN_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CANTIDAD_TOTAL" Type="float" Precision="126" Scale="0" />
+    <Property Name="FECHA_ENTREGA" Type="date" />
+    <Property Name="MONTO_TOTAL" Type="float" Precision="126" Scale="0" />
+    <Property Name="EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ESTADO_ORDEN_PEDIDO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MULTI_MONEDA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PROVEEDOR_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_ORDEN_PEDIDO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMAIL_PROVEEDOR" Type="varchar2" MaxLength="100" />
+    <Property Name="EMAIL_SUCURSAL" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PAIS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="APELLIDO" Type="varchar2" MaxLength="50" />
+    <Property Name="CORREO" Type="varchar2" MaxLength="100" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="100" />
+    <Property Name="DIV_ID" Type="varchar2" MaxLength="2" />
+    <Property Name="FECHA_NACIMIENTO" Type="date" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_ID" Type="number" Precision="10" Scale="0" />
+    <Property Name="TELEFONO_CELULAR" Type="number" Precision="10" Scale="0" />
+    <Property Name="TELEFONO_FIJO" Type="number" Precision="10" Scale="0" />
+    <Property Name="COMUNA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ESTADO_PERSONA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_PERSONA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FECHA_VENCIMIENTO" Type="date" />
+    <Property Name="PRECIO_COMPRA" Type="float" Precision="126" Scale="0" />
+    <Property Name="PRECIO_VENTA" Type="float" Precision="126" Scale="0" />
+    <Property Name="SKU" Type="varchar2" MaxLength="100" />
+    <Property Name="STOCK" Type="number" Precision="10" Scale="0" />
+    <Property Name="STOCK_CRITICO" Type="number" Precision="10" Scale="0" />
+    <Property Name="CATEGORIA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ESTADO_PRODUCTO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MARCA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ID_SUCURSAL" Type="number" Precision="38" Scale="0" />
+    <Property Name="ID_PROVEERDOR" Type="number" Precision="38" Scale="0" />
+    <Property Name="TIPO_PRODUCTO" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="PRODUCTOS_X_DIAGNOSTICO">
+    <Key>
+      <PropertyRef Name="ID_PXD" />
+    </Key>
+    <Property Name="ID_PXD" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_DIAGNOSTICO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CANTIDAD_PROD" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="ESTADO_PROVEEDOR_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PERSONA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_PROVEEDOR_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE_EMPRESA" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PROVINCIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="REGION_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REGION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PAIS_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESERVA_HORA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CLIENTE_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ESTADO_RESERVA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_RESERVA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="VEHICULO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ORSERVACION_FINAL" Type="varchar2" MaxLength="300" />
+    <Property Name="FECHA_RESERVA" Type="date" />
+  </EntityType>
+  <EntityType Name="SERVICIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="ESTADO_SERVICIO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_SERVICIO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COSTO" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="SERVICIOS_X_DIAGNOSTICO">
+    <Key>
+      <PropertyRef Name="ID_SXD" />
+    </Key>
+    <Property Name="ID_SXD" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_DIAGNOSTICO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_SERVICIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_ESTADO" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="SUCURSAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="100" />
+    <Property Name="NUMERO_TELEFONO" Type="number" Precision="10" Scale="0" />
+    <Property Name="ESTADO_SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MULTI_EMPRESA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_EMPLEADO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_ORDEN_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_PERSONA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="100" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="200" />
+    <Property Name="CATEGORIA_ID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="TIPO_PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_RESERVA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_SERVICIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_VEHICULO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_VENTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CONTRACENA" Type="varchar2" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="100" />
+    <Property Name="ESTADO_USUARIO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="PERSONA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_USUARIO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VEHICULO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="PATENTE" Type="varchar2" MaxLength="10" />
+    <Property Name="CLIENTE_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MARCA_VEHICULO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_VEHICULO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ULTIMO_UPDATE" Type="date" />
+    <Property Name="CANTIDAD_TOTAL" Type="number" Precision="10" Scale="0" />
+    <Property Name="FECHA_VENTA" Type="date" />
+    <Property Name="MONTO_TOTAL" Type="float" Precision="126" Scale="0" />
+    <Property Name="CLIENTE_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMPLEADO_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MULTI_MONEDA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUCURSAL_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TIPO_VENTA_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <Association Name="FK13BJPLSLCVK1QM23G92S7HHI0">
+    <End Role="ESTADO_USUARIO" Type="Self.ESTADO_USUARIO" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_USUARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="ESTADO_USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK1N4QIHKDGR0HFUV13HBLTWDN8">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="CLIENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK284QA77U9V2I4YOXA7HK7OC4Y">
+    <End Role="PAIS" Type="Self.PAIS" Multiplicity="1" />
+    <End Role="REGION" Type="Self.REGION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAIS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="REGION">
+        <PropertyRef Name="PAIS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK2BKMYKFXF2TC42BFD7M0B8B4L">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="DETALLE_CONTROL_RECEPCION" Type="Self.DETALLE_CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_CONTROL_RECEPCION">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK36IFL9DHEJC2V9YLE2RX1OC22">
+    <End Role="ESTADO_RECEPCION" Type="Self.ESTADO_RECEPCION" Multiplicity="1" />
+    <End Role="DETALLE_CONTROL_RECEPCION" Type="Self.DETALLE_CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_RECEPCION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_CONTROL_RECEPCION">
+        <PropertyRef Name="ESTADO_RECEPCION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK43Q46AAFMAESGN7S00APA1CTY">
+    <End Role="TIPO_VENTA" Type="Self.TIPO_VENTA" Multiplicity="1" />
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_VENTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VENTAS">
+        <PropertyRef Name="TIPO_VENTA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK5G48YC2SR5ECKS0AY9LEESUV2">
+    <End Role="TIPO_SERVICIO" Type="Self.TIPO_SERVICIO" Multiplicity="1" />
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_SERVICIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SERVICIO">
+        <PropertyRef Name="TIPO_SERVICIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK5QD6TBO9W0D3ICU2UN0VSQVY5">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="DETALLE_ORDEN_PEDIDO" Type="Self.DETALLE_ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_ORDEN_PEDIDO">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK5VG2BGYNAGEBLIQEP88S2V3UX">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK6HHDNJHS8H4C30F77LCUG51XI">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK6U5DMFUIQ6QP62LVYCOQ3CX8H">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIAGNOSTICO">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK6UQJ6JBOSLF16W3XT1MGJ1VX2">
+    <End Role="MULTI_MONEDA" Type="Self.MULTI_MONEDA" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_MONEDA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="MULTI_MONEDA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK6Y4WNBKQGEAP0GRAKKXWCV3GI">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RESERVA_HORA">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK79JMQT0XKS2C89OPFDH1E6537">
+    <End Role="ESTADO_PROVEEDOR" Type="Self.ESTADO_PROVEEDOR" Multiplicity="1" />
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_PROVEEDOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDOR">
+        <PropertyRef Name="ESTADO_PROVEEDOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK7FG8BXL4VV0J8P1GOMAVJ0B7B">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RESERVA_HORA">
+        <PropertyRef Name="EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK7K8BIAV1BW5AGANCHSQVC4MKI">
+    <End Role="ESTADO_PRODUCTO" Type="Self.ESTADO_PRODUCTO" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="ESTADO_PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK81D03XPQ8NJPLLG5GS7OJDV0S">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDOR">
+        <PropertyRef Name="PERSONA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK868TNRT85F21KGCVT9BFTGR8R">
+    <End Role="MARCA" Type="Self.MARCA" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="MARCA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK8SI429JG12XPNU65GSN2A1R44">
+    <End Role="TIPO_VEHICULO" Type="Self.TIPO_VEHICULO" Multiplicity="1" />
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_VEHICULO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="TIPO_VEHICULO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK91021P3MEDJ6H2YOWQE0TDAB0">
+    <End Role="MARCA_VEHICULO" Type="Self.MARCA_VEHICULO" Multiplicity="1" />
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCA_VEHICULO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="MARCA_VEHICULO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK91J3QHPHMO16TV2Y6GJFYGH7T">
+    <End Role="MULTI_MONEDA" Type="Self.MULTI_MONEDA" Multiplicity="1" />
+    <End Role="DETALLE_ANULACION_VENTA" Type="Self.DETALLE_ANULACION_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_MONEDA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_ANULACION_VENTA">
+        <PropertyRef Name="MULTI_MONEDA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAQ7O0YIXXM0ISM70YVJI1PK75">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="ANULACION_VENTA" Type="Self.ANULACION_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ANULACION_VENTA">
+        <PropertyRef Name="EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKBLHCMVDDSKGQ587WDPRAGAXE2">
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="1" />
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VEHICULO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RESERVA_HORA">
+        <PropertyRef Name="VEHICULO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKBSAO1KAFBHW2WLQUEQ7HTT9L6">
+    <End Role="ANULACION_VENTA" Type="Self.ANULACION_VENTA" Multiplicity="1" />
+    <End Role="DETALLE_ANULACION_VENTA" Type="Self.DETALLE_ANULACION_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ANULACION_VENTA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_ANULACION_VENTA">
+        <PropertyRef Name="ANULACION_VENTA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKC6TF68TU3H3Y79CYOAWN0SSYC">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VENTAS">
+        <PropertyRef Name="EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCAGMNJBLHLUHQY70PK72RBB5Y">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="DETALLE_ANULACION_VENTA" Type="Self.DETALLE_ANULACION_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_ANULACION_VENTA">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCL8NIJ0QMAAXKK9TP9WHQWTR8">
+    <End Role="ESTADO_CLIENTE" Type="Self.ESTADO_CLIENTE" Multiplicity="1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_CLIENTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="ESTADO_CLIENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKD91B8LUUQWQ0M5HWOMVI1EBP">
+    <End Role="TIPO_ORDEN_PEDIDO" Type="Self.TIPO_ORDEN_PEDIDO" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_ORDEN_PEDIDO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="TIPO_ORDEN_PEDIDO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDB0QYM6LAM5PSK6TRHCGE4W4U">
+    <End Role="MULTI_EMPRESA" Type="Self.MULTI_EMPRESA" Multiplicity="1" />
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_EMPRESA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SUCURSAL">
+        <PropertyRef Name="MULTI_EMPRESA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDHBBR9AELOPF2VXIL3QH9D0D">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="PERSONA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKDSKU2QQVHDPB2ILEV4X7XQ1EY">
+    <End Role="ESTADO_SUCURSAL" Type="Self.ESTADO_SUCURSAL" Multiplicity="1" />
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SUCURSAL">
+        <PropertyRef Name="ESTADO_SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKE581TP719P3D7O5U2W9SRE10B">
+    <End Role="TIPO_USUARIO" Type="Self.TIPO_USUARIO" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_USUARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="TIPO_USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKE8EBFJIHFWCXL7U3U5PAU1BQV">
+    <End Role="TIPO_EMPLEADO" Type="Self.TIPO_EMPLEADO" Multiplicity="1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="TIPO_EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKESKQ277UF527HBRP9YK1YTJ2P">
+    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="1" />
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMUNA">
+        <PropertyRef Name="PROVINCIA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKETQ6MJG40LPYMJYVUO2QS897I">
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="1" />
+    <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA_HORA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIAGNOSTICO">
+        <PropertyRef Name="RESERVA_HORA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEUCF07L8HLCRJKI4TTOAVB07M">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="ANULACION_VENTA" Type="Self.ANULACION_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ANULACION_VENTA">
+        <PropertyRef Name="CLIENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFKWY3DV4V0IJ7NI2TNWPET99L">
+    <End Role="ESTADO_RESERVA" Type="Self.ESTADO_RESERVA" Multiplicity="1" />
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_RESERVA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RESERVA_HORA">
+        <PropertyRef Name="ESTADO_RESERVA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGR10WNIAHO2C3CVAWCK6HHHBK">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="CONTROL_RECEPCION" Type="Self.CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONTROL_RECEPCION">
+        <PropertyRef Name="EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGXXYNBNJ72KX357DFLIBJYWYH">
+    <End Role="ESTADO_EMPLEADO" Type="Self.ESTADO_EMPLEADO" Multiplicity="1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="ESTADO_EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKH93RTESJD4S5TUFO85HE1NXB9">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RESERVA_HORA">
+        <PropertyRef Name="CLIENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKHDTC29L4PV8K5EHU78JNLVK0X">
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="1" />
+    <End Role="ANULACION_VENTA" Type="Self.ANULACION_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ANULACION_VENTA">
+        <PropertyRef Name="VENTAS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKHPHYLNAMS6QJC4N5AI5JSADPT">
+    <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
+    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVINCIA">
+        <PropertyRef Name="REGION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKIAAUYNEFN97K8NL88SS4SNYL6">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKICLGLXRQQJSX1VGNY3WAX26X9">
+    <End Role="CONTROL_RECEPCION" Type="Self.CONTROL_RECEPCION" Multiplicity="1" />
+    <End Role="DETALLE_CONTROL_RECEPCION" Type="Self.DETALLE_CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTROL_RECEPCION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_CONTROL_RECEPCION">
+        <PropertyRef Name="CONTROL_RECEPCION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKIUBNBU90Y5KHO8CK5QFFF1ESG">
+    <End Role="ESTADO_CONTROL_RECEPCION" Type="Self.ESTADO_CONTROL_RECEPCION" Multiplicity="1" />
+    <End Role="CONTROL_RECEPCION" Type="Self.CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_CONTROL_RECEPCION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONTROL_RECEPCION">
+        <PropertyRef Name="ESTADO_CONTROL_RECEPCION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKJ6RCYFDLJGJYRVA4REPF2LYRT">
+    <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="1" />
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMUNA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="COMUNA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKKKYJ1195J6DQKUR9B6N2K0VE8">
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="PROVEEDOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKKV68LX8XPBPV6JPRH7TAIEAEJ">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKL2IXK4TM1YAI0YMJKUQJHVONA">
+    <End Role="MULTI_MONEDA" Type="Self.MULTI_MONEDA" Multiplicity="1" />
+    <End Role="DETALLE_ORDEN_PEDIDO" Type="Self.DETALLE_ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_MONEDA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_ORDEN_PEDIDO">
+        <PropertyRef Name="MULTI_MONEDA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKLM8CP4Q758MJ7SDCO46S9K4PO">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SERVICIO">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKLP4P1WF0T6XTDVT2KWW3DYYRC">
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="1" />
+    <End Role="CONTROL_RECEPCION" Type="Self.CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONTROL_RECEPCION">
+        <PropertyRef Name="ORDEN_PEDIDO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKLPGGIC21L2UK2LBTVERKGHM0Y">
+    <End Role="ESTADO_EMPRESA" Type="Self.ESTADO_EMPRESA" Multiplicity="1" />
+    <End Role="MULTI_EMPRESA" Type="Self.MULTI_EMPRESA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_EMPRESA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MULTI_EMPRESA">
+        <PropertyRef Name="ESTADO_EMPRESA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKLSE7LQGHMT3R1SP298SS9S5BC">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="PERSONA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKLWBI0JS1RQO3OOUE0NH88QV14">
+    <End Role="ESTADO_PERSONA" Type="Self.ESTADO_PERSONA" Multiplicity="1" />
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_PERSONA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="ESTADO_PERSONA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKM7FYCJ8KLS21MEDF66DEQSPGD">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="DETALLE_VENTAS" Type="Self.DETALLE_VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTAS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKM9ALUF81N2R4S2W46F5HYYBW0">
+    <End Role="ESTADO_ORDEN_PEDIDO" Type="Self.ESTADO_ORDEN_PEDIDO" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_ORDEN_PEDIDO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ESTADO_ORDEN_PEDIDO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMC52UPYWN8GONA2IIWWWPHB92">
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="PERSONA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKNDDCXGQBB9WSWPXLP9BYI1X3S">
+    <End Role="MULTI_MONEDA" Type="Self.MULTI_MONEDA" Multiplicity="1" />
+    <End Role="DETALLE_VENTAS" Type="Self.DETALLE_VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_MONEDA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTAS">
+        <PropertyRef Name="MULTI_MONEDA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKOCX16YP92RCJ8QRYDY0RBN19S">
+    <End Role="TIPO_PROVEEDOR" Type="Self.TIPO_PROVEEDOR" Multiplicity="1" />
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PROVEEDOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDOR">
+        <PropertyRef Name="TIPO_PROVEEDOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKODQR7965OK9RWQUJ1UTIAMT0M">
+    <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="CATEGORIA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKOVG4LQ1XM42WIQL8KVBH9IOHX">
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="1" />
+    <End Role="DETALLE_VENTAS" Type="Self.DETALLE_VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTAS">
+        <PropertyRef Name="VENTAS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPLBVT711LMGFN44QWDOY22GAA">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="EMPLEADO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQEYEG1VY7Y1XRQ4EIM55SQVIU">
+    <End Role="MULTI_MONEDA" Type="Self.MULTI_MONEDA" Multiplicity="1" />
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_MONEDA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VENTAS">
+        <PropertyRef Name="MULTI_MONEDA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKQI03FUOUSTM28VJUNBX48RD8O">
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="1" />
+    <End Role="DETALLE_VENTAS" Type="Self.DETALLE_VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTAS">
+        <PropertyRef Name="SERVICIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKR2J84559QQ5PUEGPR2F6CILJJ">
+    <End Role="ESTADO_SERVICIO" Type="Self.ESTADO_SERVICIO" Multiplicity="1" />
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_SERVICIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SERVICIO">
+        <PropertyRef Name="ESTADO_SERVICIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKRTVHUTDBNDGHIR0QRAQL4P8RX">
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="1" />
+    <End Role="DETALLE_ORDEN_PEDIDO" Type="Self.DETALLE_ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_ORDEN_PEDIDO">
+        <PropertyRef Name="ORDEN_PEDIDO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKRY4EGBLY0XB44D6VJM49TDEUS">
+    <End Role="TIPO_RESERVA" Type="Self.TIPO_RESERVA" Multiplicity="1" />
+    <End Role="RESERVA_HORA" Type="Self.RESERVA_HORA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_RESERVA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RESERVA_HORA">
+        <PropertyRef Name="TIPO_RESERVA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSI9IWVD2W6A4JOLIVBXWYIAY2">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VENTAS">
+        <PropertyRef Name="CLIENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKSQB4V6E40JC5VT3L5BXYEL4FI">
+    <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+    <End Role="VENTAS" Type="Self.VENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSAL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VENTAS">
+        <PropertyRef Name="SUCURSAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKXXG7SG5RMF6YP09MN7J67MAS">
+    <End Role="TIPO_PERSONA" Type="Self.TIPO_PERSONA" Multiplicity="1" />
+    <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PERSONA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="TIPO_PERSONA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKYY0RI2TQJFHYSV4RTFA6OIMV">
+    <End Role="MULTI_MONEDA" Type="Self.MULTI_MONEDA" Multiplicity="1" />
+    <End Role="DETALLE_CONTROL_RECEPCION" Type="Self.DETALLE_CONTROL_RECEPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTI_MONEDA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DETALLE_CONTROL_RECEPCION">
+        <PropertyRef Name="MULTI_MONEDA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelServiexpressStoreContainer">
+    <EntitySet Name="ANULACION_VENTA" EntityType="Self.ANULACION_VENTA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="COMUNA" EntityType="Self.COMUNA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="CONTROL_RECEPCION" EntityType="Self.CONTROL_RECEPCION" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="DETALLE_ANULACION_VENTA" EntityType="Self.DETALLE_ANULACION_VENTA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="DETALLE_CONTROL_RECEPCION" EntityType="Self.DETALLE_CONTROL_RECEPCION" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="DETALLE_ORDEN_PEDIDO" EntityType="Self.DETALLE_ORDEN_PEDIDO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="DETALLE_VENTAS" EntityType="Self.DETALLE_VENTAS" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="DIAGNOSTICO" EntityType="Self.DIAGNOSTICO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_CLIENTE" EntityType="Self.ESTADO_CLIENTE" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_CONTROL_RECEPCION" EntityType="Self.ESTADO_CONTROL_RECEPCION" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_EMPLEADO" EntityType="Self.ESTADO_EMPLEADO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_EMPRESA" EntityType="Self.ESTADO_EMPRESA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_ORDEN_PEDIDO" EntityType="Self.ESTADO_ORDEN_PEDIDO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_PERSONA" EntityType="Self.ESTADO_PERSONA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_PRODUCTO" EntityType="Self.ESTADO_PRODUCTO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_PROVEEDOR" EntityType="Self.ESTADO_PROVEEDOR" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_RECEPCION" EntityType="Self.ESTADO_RECEPCION" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_RESERVA" EntityType="Self.ESTADO_RESERVA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_SERVICIO" EntityType="Self.ESTADO_SERVICIO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_SERVICIO_X_DIAGNOSTICO" EntityType="Self.ESTADO_SERVICIO_X_DIAGNOSTICO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_SUCURSAL" EntityType="Self.ESTADO_SUCURSAL" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ESTADO_USUARIO" EntityType="Self.ESTADO_USUARIO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="MARCA" EntityType="Self.MARCA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="MARCA_VEHICULO" EntityType="Self.MARCA_VEHICULO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="MULTI_EMPRESA" EntityType="Self.MULTI_EMPRESA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="MULTI_MONEDA" EntityType="Self.MULTI_MONEDA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="ORDEN_PEDIDO" EntityType="Self.ORDEN_PEDIDO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="PAIS" EntityType="Self.PAIS" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="PRODUCTOS_X_DIAGNOSTICO" EntityType="Self.PRODUCTOS_X_DIAGNOSTICO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="PROVEEDOR" EntityType="Self.PROVEEDOR" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="REGION" EntityType="Self.REGION" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="RESERVA_HORA" EntityType="Self.RESERVA_HORA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="SERVICIOS_X_DIAGNOSTICO" EntityType="Self.SERVICIOS_X_DIAGNOSTICO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="SUCURSAL" EntityType="Self.SUCURSAL" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_EMPLEADO" EntityType="Self.TIPO_EMPLEADO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_ORDEN_PEDIDO" EntityType="Self.TIPO_ORDEN_PEDIDO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_PERSONA" EntityType="Self.TIPO_PERSONA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_PRODUCTO" EntityType="Self.TIPO_PRODUCTO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_PROVEEDOR" EntityType="Self.TIPO_PROVEEDOR" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_RESERVA" EntityType="Self.TIPO_RESERVA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_SERVICIO" EntityType="Self.TIPO_SERVICIO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_USUARIO" EntityType="Self.TIPO_USUARIO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_VEHICULO" EntityType="Self.TIPO_VEHICULO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="TIPO_VENTA" EntityType="Self.TIPO_VENTA" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="VEHICULO" EntityType="Self.VEHICULO" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <EntitySet Name="VENTAS" EntityType="Self.VENTAS" Schema="SERVIEXPRESS" store:Type="Tables" />
+    <AssociationSet Name="FK13BJPLSLCVK1QM23G92S7HHI0" Association="Self.FK13BJPLSLCVK1QM23G92S7HHI0">
+      <End Role="ESTADO_USUARIO" EntitySet="ESTADO_USUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK1N4QIHKDGR0HFUV13HBLTWDN8" Association="Self.FK1N4QIHKDGR0HFUV13HBLTWDN8">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+    </AssociationSet>
+    <AssociationSet Name="FK284QA77U9V2I4YOXA7HK7OC4Y" Association="Self.FK284QA77U9V2I4YOXA7HK7OC4Y">
+      <End Role="PAIS" EntitySet="PAIS" />
+      <End Role="REGION" EntitySet="REGION" />
+    </AssociationSet>
+    <AssociationSet Name="FK2BKMYKFXF2TC42BFD7M0B8B4L" Association="Self.FK2BKMYKFXF2TC42BFD7M0B8B4L">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="DETALLE_CONTROL_RECEPCION" EntitySet="DETALLE_CONTROL_RECEPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK36IFL9DHEJC2V9YLE2RX1OC22" Association="Self.FK36IFL9DHEJC2V9YLE2RX1OC22">
+      <End Role="ESTADO_RECEPCION" EntitySet="ESTADO_RECEPCION" />
+      <End Role="DETALLE_CONTROL_RECEPCION" EntitySet="DETALLE_CONTROL_RECEPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK43Q46AAFMAESGN7S00APA1CTY" Association="Self.FK43Q46AAFMAESGN7S00APA1CTY">
+      <End Role="TIPO_VENTA" EntitySet="TIPO_VENTA" />
+      <End Role="VENTAS" EntitySet="VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK5G48YC2SR5ECKS0AY9LEESUV2" Association="Self.FK5G48YC2SR5ECKS0AY9LEESUV2">
+      <End Role="TIPO_SERVICIO" EntitySet="TIPO_SERVICIO" />
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK5QD6TBO9W0D3ICU2UN0VSQVY5" Association="Self.FK5QD6TBO9W0D3ICU2UN0VSQVY5">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="DETALLE_ORDEN_PEDIDO" EntitySet="DETALLE_ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK5VG2BGYNAGEBLIQEP88S2V3UX" Association="Self.FK5VG2BGYNAGEBLIQEP88S2V3UX">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK6HHDNJHS8H4C30F77LCUG51XI" Association="Self.FK6HHDNJHS8H4C30F77LCUG51XI">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK6U5DMFUIQ6QP62LVYCOQ3CX8H" Association="Self.FK6U5DMFUIQ6QP62LVYCOQ3CX8H">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICO" />
+    </AssociationSet>
+    <AssociationSet Name="FK6UQJ6JBOSLF16W3XT1MGJ1VX2" Association="Self.FK6UQJ6JBOSLF16W3XT1MGJ1VX2">
+      <End Role="MULTI_MONEDA" EntitySet="MULTI_MONEDA" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK6Y4WNBKQGEAP0GRAKKXWCV3GI" Association="Self.FK6Y4WNBKQGEAP0GRAKKXWCV3GI">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+    </AssociationSet>
+    <AssociationSet Name="FK79JMQT0XKS2C89OPFDH1E6537" Association="Self.FK79JMQT0XKS2C89OPFDH1E6537">
+      <End Role="ESTADO_PROVEEDOR" EntitySet="ESTADO_PROVEEDOR" />
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK7FG8BXL4VV0J8P1GOMAVJ0B7B" Association="Self.FK7FG8BXL4VV0J8P1GOMAVJ0B7B">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+    </AssociationSet>
+    <AssociationSet Name="FK7K8BIAV1BW5AGANCHSQVC4MKI" Association="Self.FK7K8BIAV1BW5AGANCHSQVC4MKI">
+      <End Role="ESTADO_PRODUCTO" EntitySet="ESTADO_PRODUCTO" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK81D03XPQ8NJPLLG5GS7OJDV0S" Association="Self.FK81D03XPQ8NJPLLG5GS7OJDV0S">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK868TNRT85F21KGCVT9BFTGR8R" Association="Self.FK868TNRT85F21KGCVT9BFTGR8R">
+      <End Role="MARCA" EntitySet="MARCA" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK8SI429JG12XPNU65GSN2A1R44" Association="Self.FK8SI429JG12XPNU65GSN2A1R44">
+      <End Role="TIPO_VEHICULO" EntitySet="TIPO_VEHICULO" />
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+    </AssociationSet>
+    <AssociationSet Name="FK91021P3MEDJ6H2YOWQE0TDAB0" Association="Self.FK91021P3MEDJ6H2YOWQE0TDAB0">
+      <End Role="MARCA_VEHICULO" EntitySet="MARCA_VEHICULO" />
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+    </AssociationSet>
+    <AssociationSet Name="FK91J3QHPHMO16TV2Y6GJFYGH7T" Association="Self.FK91J3QHPHMO16TV2Y6GJFYGH7T">
+      <End Role="MULTI_MONEDA" EntitySet="MULTI_MONEDA" />
+      <End Role="DETALLE_ANULACION_VENTA" EntitySet="DETALLE_ANULACION_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FKAQ7O0YIXXM0ISM70YVJI1PK75" Association="Self.FKAQ7O0YIXXM0ISM70YVJI1PK75">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="ANULACION_VENTA" EntitySet="ANULACION_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FKBLHCMVDDSKGQ587WDPRAGAXE2" Association="Self.FKBLHCMVDDSKGQ587WDPRAGAXE2">
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+    </AssociationSet>
+    <AssociationSet Name="FKBSAO1KAFBHW2WLQUEQ7HTT9L6" Association="Self.FKBSAO1KAFBHW2WLQUEQ7HTT9L6">
+      <End Role="ANULACION_VENTA" EntitySet="ANULACION_VENTA" />
+      <End Role="DETALLE_ANULACION_VENTA" EntitySet="DETALLE_ANULACION_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FKC6TF68TU3H3Y79CYOAWN0SSYC" Association="Self.FKC6TF68TU3H3Y79CYOAWN0SSYC">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="VENTAS" EntitySet="VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKCAGMNJBLHLUHQY70PK72RBB5Y" Association="Self.FKCAGMNJBLHLUHQY70PK72RBB5Y">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="DETALLE_ANULACION_VENTA" EntitySet="DETALLE_ANULACION_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FKCL8NIJ0QMAAXKK9TP9WHQWTR8" Association="Self.FKCL8NIJ0QMAAXKK9TP9WHQWTR8">
+      <End Role="ESTADO_CLIENTE" EntitySet="ESTADO_CLIENTE" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FKD91B8LUUQWQ0M5HWOMVI1EBP" Association="Self.FKD91B8LUUQWQ0M5HWOMVI1EBP">
+      <End Role="TIPO_ORDEN_PEDIDO" EntitySet="TIPO_ORDEN_PEDIDO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FKDB0QYM6LAM5PSK6TRHCGE4W4U" Association="Self.FKDB0QYM6LAM5PSK6TRHCGE4W4U">
+      <End Role="MULTI_EMPRESA" EntitySet="MULTI_EMPRESA" />
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+    </AssociationSet>
+    <AssociationSet Name="FKDHBBR9AELOPF2VXIL3QH9D0D" Association="Self.FKDHBBR9AELOPF2VXIL3QH9D0D">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FKDSKU2QQVHDPB2ILEV4X7XQ1EY" Association="Self.FKDSKU2QQVHDPB2ILEV4X7XQ1EY">
+      <End Role="ESTADO_SUCURSAL" EntitySet="ESTADO_SUCURSAL" />
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+    </AssociationSet>
+    <AssociationSet Name="FKE581TP719P3D7O5U2W9SRE10B" Association="Self.FKE581TP719P3D7O5U2W9SRE10B">
+      <End Role="TIPO_USUARIO" EntitySet="TIPO_USUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FKE8EBFJIHFWCXL7U3U5PAU1BQV" Association="Self.FKE8EBFJIHFWCXL7U3U5PAU1BQV">
+      <End Role="TIPO_EMPLEADO" EntitySet="TIPO_EMPLEADO" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FKESKQ277UF527HBRP9YK1YTJ2P" Association="Self.FKESKQ277UF527HBRP9YK1YTJ2P">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="COMUNA" EntitySet="COMUNA" />
+    </AssociationSet>
+    <AssociationSet Name="FKETQ6MJG40LPYMJYVUO2QS897I" Association="Self.FKETQ6MJG40LPYMJYVUO2QS897I">
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+      <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICO" />
+    </AssociationSet>
+    <AssociationSet Name="FKEUCF07L8HLCRJKI4TTOAVB07M" Association="Self.FKEUCF07L8HLCRJKI4TTOAVB07M">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="ANULACION_VENTA" EntitySet="ANULACION_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FKFKWY3DV4V0IJ7NI2TNWPET99L" Association="Self.FKFKWY3DV4V0IJ7NI2TNWPET99L">
+      <End Role="ESTADO_RESERVA" EntitySet="ESTADO_RESERVA" />
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+    </AssociationSet>
+    <AssociationSet Name="FKGR10WNIAHO2C3CVAWCK6HHHBK" Association="Self.FKGR10WNIAHO2C3CVAWCK6HHHBK">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="CONTROL_RECEPCION" EntitySet="CONTROL_RECEPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FKGXXYNBNJ72KX357DFLIBJYWYH" Association="Self.FKGXXYNBNJ72KX357DFLIBJYWYH">
+      <End Role="ESTADO_EMPLEADO" EntitySet="ESTADO_EMPLEADO" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FKH93RTESJD4S5TUFO85HE1NXB9" Association="Self.FKH93RTESJD4S5TUFO85HE1NXB9">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+    </AssociationSet>
+    <AssociationSet Name="FKHDTC29L4PV8K5EHU78JNLVK0X" Association="Self.FKHDTC29L4PV8K5EHU78JNLVK0X">
+      <End Role="VENTAS" EntitySet="VENTAS" />
+      <End Role="ANULACION_VENTA" EntitySet="ANULACION_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FKHPHYLNAMS6QJC4N5AI5JSADPT" Association="Self.FKHPHYLNAMS6QJC4N5AI5JSADPT">
+      <End Role="REGION" EntitySet="REGION" />
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FKIAAUYNEFN97K8NL88SS4SNYL6" Association="Self.FKIAAUYNEFN97K8NL88SS4SNYL6">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FKICLGLXRQQJSX1VGNY3WAX26X9" Association="Self.FKICLGLXRQQJSX1VGNY3WAX26X9">
+      <End Role="CONTROL_RECEPCION" EntitySet="CONTROL_RECEPCION" />
+      <End Role="DETALLE_CONTROL_RECEPCION" EntitySet="DETALLE_CONTROL_RECEPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FKIUBNBU90Y5KHO8CK5QFFF1ESG" Association="Self.FKIUBNBU90Y5KHO8CK5QFFF1ESG">
+      <End Role="ESTADO_CONTROL_RECEPCION" EntitySet="ESTADO_CONTROL_RECEPCION" />
+      <End Role="CONTROL_RECEPCION" EntitySet="CONTROL_RECEPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FKJ6RCYFDLJGJYRVA4REPF2LYRT" Association="Self.FKJ6RCYFDLJGJYRVA4REPF2LYRT">
+      <End Role="COMUNA" EntitySet="COMUNA" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="FKKKYJ1195J6DQKUR9B6N2K0VE8" Association="Self.FKKKYJ1195J6DQKUR9B6N2K0VE8">
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FKKV68LX8XPBPV6JPRH7TAIEAEJ" Association="Self.FKKV68LX8XPBPV6JPRH7TAIEAEJ">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FKL2IXK4TM1YAI0YMJKUQJHVONA" Association="Self.FKL2IXK4TM1YAI0YMJKUQJHVONA">
+      <End Role="MULTI_MONEDA" EntitySet="MULTI_MONEDA" />
+      <End Role="DETALLE_ORDEN_PEDIDO" EntitySet="DETALLE_ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FKLM8CP4Q758MJ7SDCO46S9K4PO" Association="Self.FKLM8CP4Q758MJ7SDCO46S9K4PO">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="FKLP4P1WF0T6XTDVT2KWW3DYYRC" Association="Self.FKLP4P1WF0T6XTDVT2KWW3DYYRC">
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+      <End Role="CONTROL_RECEPCION" EntitySet="CONTROL_RECEPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FKLPGGIC21L2UK2LBTVERKGHM0Y" Association="Self.FKLPGGIC21L2UK2LBTVERKGHM0Y">
+      <End Role="ESTADO_EMPRESA" EntitySet="ESTADO_EMPRESA" />
+      <End Role="MULTI_EMPRESA" EntitySet="MULTI_EMPRESA" />
+    </AssociationSet>
+    <AssociationSet Name="FKLSE7LQGHMT3R1SP298SS9S5BC" Association="Self.FKLSE7LQGHMT3R1SP298SS9S5BC">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FKLWBI0JS1RQO3OOUE0NH88QV14" Association="Self.FKLWBI0JS1RQO3OOUE0NH88QV14">
+      <End Role="ESTADO_PERSONA" EntitySet="ESTADO_PERSONA" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="FKM7FYCJ8KLS21MEDF66DEQSPGD" Association="Self.FKM7FYCJ8KLS21MEDF66DEQSPGD">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="DETALLE_VENTAS" EntitySet="DETALLE_VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKM9ALUF81N2R4S2W46F5HYYBW0" Association="Self.FKM9ALUF81N2R4S2W46F5HYYBW0">
+      <End Role="ESTADO_ORDEN_PEDIDO" EntitySet="ESTADO_ORDEN_PEDIDO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FKMC52UPYWN8GONA2IIWWWPHB92" Association="Self.FKMC52UPYWN8GONA2IIWWWPHB92">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FKNDDCXGQBB9WSWPXLP9BYI1X3S" Association="Self.FKNDDCXGQBB9WSWPXLP9BYI1X3S">
+      <End Role="MULTI_MONEDA" EntitySet="MULTI_MONEDA" />
+      <End Role="DETALLE_VENTAS" EntitySet="DETALLE_VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKOCX16YP92RCJ8QRYDY0RBN19S" Association="Self.FKOCX16YP92RCJ8QRYDY0RBN19S">
+      <End Role="TIPO_PROVEEDOR" EntitySet="TIPO_PROVEEDOR" />
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+    </AssociationSet>
+    <AssociationSet Name="FKODQR7965OK9RWQUJ1UTIAMT0M" Association="Self.FKODQR7965OK9RWQUJ1UTIAMT0M">
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="FKOVG4LQ1XM42WIQL8KVBH9IOHX" Association="Self.FKOVG4LQ1XM42WIQL8KVBH9IOHX">
+      <End Role="VENTAS" EntitySet="VENTAS" />
+      <End Role="DETALLE_VENTAS" EntitySet="DETALLE_VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKPLBVT711LMGFN44QWDOY22GAA" Association="Self.FKPLBVT711LMGFN44QWDOY22GAA">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FKQEYEG1VY7Y1XRQ4EIM55SQVIU" Association="Self.FKQEYEG1VY7Y1XRQ4EIM55SQVIU">
+      <End Role="MULTI_MONEDA" EntitySet="MULTI_MONEDA" />
+      <End Role="VENTAS" EntitySet="VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKQI03FUOUSTM28VJUNBX48RD8O" Association="Self.FKQI03FUOUSTM28VJUNBX48RD8O">
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+      <End Role="DETALLE_VENTAS" EntitySet="DETALLE_VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKR2J84559QQ5PUEGPR2F6CILJJ" Association="Self.FKR2J84559QQ5PUEGPR2F6CILJJ">
+      <End Role="ESTADO_SERVICIO" EntitySet="ESTADO_SERVICIO" />
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="FKRTVHUTDBNDGHIR0QRAQL4P8RX" Association="Self.FKRTVHUTDBNDGHIR0QRAQL4P8RX">
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+      <End Role="DETALLE_ORDEN_PEDIDO" EntitySet="DETALLE_ORDEN_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FKRY4EGBLY0XB44D6VJM49TDEUS" Association="Self.FKRY4EGBLY0XB44D6VJM49TDEUS">
+      <End Role="TIPO_RESERVA" EntitySet="TIPO_RESERVA" />
+      <End Role="RESERVA_HORA" EntitySet="RESERVA_HORA" />
+    </AssociationSet>
+    <AssociationSet Name="FKSI9IWVD2W6A4JOLIVBXWYIAY2" Association="Self.FKSI9IWVD2W6A4JOLIVBXWYIAY2">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="VENTAS" EntitySet="VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKSQB4V6E40JC5VT3L5BXYEL4FI" Association="Self.FKSQB4V6E40JC5VT3L5BXYEL4FI">
+      <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+      <End Role="VENTAS" EntitySet="VENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FKXXG7SG5RMF6YP09MN7J67MAS" Association="Self.FKXXG7SG5RMF6YP09MN7J67MAS">
+      <End Role="TIPO_PERSONA" EntitySet="TIPO_PERSONA" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="FKYY0RI2TQJFHYSV4RTFA6OIMV" Association="Self.FKYY0RI2TQJFHYSV4RTFA6OIMV">
+      <End Role="MULTI_MONEDA" EntitySet="MULTI_MONEDA" />
+      <End Role="DETALLE_CONTROL_RECEPCION" EntitySet="DETALLE_CONTROL_RECEPCION" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

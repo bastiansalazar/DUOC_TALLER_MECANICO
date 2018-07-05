@@ -1,0 +1,65 @@
+﻿<Window x:Class="AppServiexpress.Inicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress"
+        mc:Ignorable="d"
+        Title="SERVIEXPRESS" Height="720" Width="1080" WindowState="Maximized" Icon="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_icono2.png">
+    <Grid Margin="0,0,2,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="/AppServiexpress;component/Contenidos/Imagenes/baner.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="413*"/>
+            <ColumnDefinition Width="398*"/>
+        </Grid.ColumnDefinitions>
+        <Menu HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="auto" Grid.ColumnSpan="2">
+            <MenuItem Header="Usuarios" x:Name="mUsuarios">
+                <Button x:Name="iRegistroPersonas" Content="Registro de Personas" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_AdministrarPersonas"/>
+                <Button x:Name="iRegistroClientes" Content="Registro de Clientes" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_RegistroClientes"/>
+                <Button x:Name="iRegistroEmpleado" Content="Registro de Empleados" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_RegistroEmpleados"/>
+                <Button x:Name="iRegistroProveedor" Content="Registro de Proveedores" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_RegistroProveedores"/>
+                <Separator Background="#FFD7D7D7" BorderBrush="#FFD7D7D7" Height="2"></Separator>
+                <Button x:Name="iAdministrarUsuario" Content="Administrador de Usuarios" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_AdministradorUsuarios"/>
+            </MenuItem>
+            <MenuItem Header="Requerimientos" x:Name="mRequerimientos">
+                <Button x:Name="iIngresarRequerimiento" Content="Ingresar Requerimiento" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_IngresarRequerimientos"/>
+                <Button x:Name="iModificarRequerimiento" Content="Modificar Requerimiento" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_ModificarRequerimientos"/>
+                <Button x:Name="iFinlizarRequerimiento" Content="Finalizar Requerimiento" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_FinalizarRequerimientos"/>
+            </MenuItem>
+            <MenuItem Header="Boletas/Facturas" x:Name="mBoletas">
+                <Button x:Name="iEmitirDocumento" Content="Emitir Documento" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_EmitirDocumentos"/>
+                <Button x:Name="iRegistroVentas" Content="Registro Ventas" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_RegistroVentas"/>
+            </MenuItem>
+            <MenuItem Header="Productos" x:Name="mProductos">
+                <Button x:Name="iIngresarProductos" Content="Ingresar Productos" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_IngresarProducto"/>
+                <Button x:Name="iModificarProductos" Content="Modificar Productos" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_ModificarProducto"/>
+            </MenuItem>
+            <MenuItem Header="Pedidos Proveedores" x:Name="mPedidos">
+                <Button x:Name="iEmitirPedido" Content="Emitir Pedido" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_EmitirPedido"/>
+                <Button x:Name="iModificarPedido" Content="Modificar Pedido" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_ModificarPedido"/>
+                <Button x:Name="iIngrsarRecepcion" Content="Ingresar Recepción" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_IngresarRecepcion"/>
+                <Button x:Name="iEmitirDevolucion" Content="Emitir Devolución" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_EmitirDevolucion"/>
+            </MenuItem>
+            <MenuItem Header="Taller" x:Name="mTaller">
+                <Button x:Name="iAdministrarServicios" Content="Administrar Servicios" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_AdministrarServicios"/>
+                <Button x:Name="iAdministrarVehiculos" Content="Administrar Vehículos" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_AdministrarVehiculos"/>
+            </MenuItem>
+            <MenuItem Header="Mantenedores" x:Name="mMantenedores">
+                <Button Content="Comunas" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Comuna"/>
+                <Button Content="Empresas Serviexpress" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Empresas"/>
+                <Button Content="Marcas Productos" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_MarcaProductos"/>
+                <Button Content="Marcas Vehiculos" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_MarcasVehiculos"/>
+                <Button Content="Moneda Pago" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Moneda"/>
+                <Button Content="Pais" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Pais"/>
+                <Button Content="Provincia" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Provincia"/>
+                <Button Content="Region" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Region"/>
+                <Button Content="Sucursales" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_Sucursal"/>
+                <Button Content="Tipos Servicios" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_TipodeServicio"/>
+                <Button Content="Tipos Productos" BorderBrush="{x:Null}" Background="{x:Null}" Click="Ver_TipoProducto"/>
+            </MenuItem>
+            <MenuItem Header="Cerrar Sesión" Click="MenuItem_Click" ></MenuItem>
+        </Menu>
+    </Grid>
+</Window>

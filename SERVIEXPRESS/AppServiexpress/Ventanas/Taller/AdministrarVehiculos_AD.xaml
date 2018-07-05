@@ -1,0 +1,41 @@
+﻿<Window x:Class="AppServiexpress.Ventanas.Taller.AdministrarVehiculos_AD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress.Ventanas.Taller"
+        mc:Ignorable="d"
+        Title="Administrar Vehículos" WindowStartupLocation="CenterScreen" Height="650" Width="1078" Icon="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_icono2.png" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#FF1834E6" Opacity="0.3"/>
+        </Grid.Background>
+        <GridSplitter HorizontalAlignment="Left" Height="679" Margin="484,10,0,0" VerticalAlignment="Top" Width="2"/>
+        <DataGrid x:Name="dgVehiculos" HorizontalAlignment="Left" Height="329" Margin="28,111,0,0" VerticalAlignment="Top" Width="431" IsReadOnly="True" MouseDoubleClick="dgVehiculos_MouseDoubleClick"/>
+        <Label Content="Texto Busqueda" HorizontalAlignment="Left" Margin="28,80,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="-0.627,-0.269"/>
+        <TextBox x:Name="txtBusqueda" Height="26"  Width="180" Margin="131,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  HorizontalAlignment="Left" VerticalContentAlignment="Center" CharacterCasing="Upper"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="336,80,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnBuscar_Click"/>
+        <Label Content="Tipo de Vehiculo" HorizontalAlignment="Left" Margin="508,121,0,0" VerticalAlignment="Top"/>
+        <Label Content="Marca de Vehiculo" HorizontalAlignment="Left" Margin="508,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cliente Responsable" HorizontalAlignment="Left" Margin="508,184,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="911,370,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnModificar_Click"/>
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="765,370,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnCrear_Click"/>
+        <ComboBox x:Name="cbxTipoBusqueda" HorizontalAlignment="Left" Margin="131,53,0,0" VerticalAlignment="Top" Height="26"  Width="180">
+            <ListBoxItem Content="TIPO" IsSelected="True"/>
+            <ListBoxItem Content="MARCA"  />
+            <ListBoxItem Content="PATENTE"  />
+        </ComboBox>
+        <Label Content="Tipo Busqueda" HorizontalAlignment="Left" Margin="28,53,0,0" VerticalAlignment="Top" Width="98" RenderTransformOrigin="-0.627,-0.269"/>
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="917,75,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnLimpiar_Click" />
+        <ComboBox x:Name="cbxTipoVehiculo" HorizontalAlignment="Left" Margin="655,120,0,0" VerticalAlignment="Top" Height="26"  Width="385"  />
+        <ComboBox x:Name="cbxCliente" HorizontalAlignment="Left" Margin="655,183,0,0" VerticalAlignment="Top" Height="26"  Width="385" />
+        <Label Content="Identificador de Vehículo:" HorizontalAlignment="Left" Margin="508,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_IdVehiculo" Content="" HorizontalAlignment="Left" Margin="655,90,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbxMarcaVehiculo" HorizontalAlignment="Left" Margin="655,152,0,0" VerticalAlignment="Top" Height="26"  Width="385"  />
+        <Label Content="Patente de Vehiculo" HorizontalAlignment="Left" Margin="508,215,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPatente" Height="26"  Width="180" Margin="655,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  HorizontalAlignment="Left" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="7"/>
+        <Button x:Name="btn_LimpiarFiltro" Content="Limpiar Filtro" HorizontalAlignment="Left" Margin="336,35,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btn_LimpiarFiltro_Click"  />
+        <Button x:Name="bntAyuda" Content="AYUDA" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="46" Height="20" Click="bntAyuda_Click" />
+
+    </Grid>
+</Window>

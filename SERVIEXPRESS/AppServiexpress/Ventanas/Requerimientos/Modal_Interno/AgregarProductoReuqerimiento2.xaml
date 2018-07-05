@@ -1,0 +1,31 @@
+﻿<Window x:Class="AppServiexpress.Ventanas.Requerimientos.Modal_Interno.AgregarProductoReuqerimiento2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress.Ventanas.Requerimientos.Modal_Interno"
+        mc:Ignorable="d"
+         Title="Agregar Productos" Height="363.5" Width="589.59" WindowStartupLocation="CenterScreen" Icon="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_icono2.png" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid Background="#FFFB9F9F">
+        <Label Content="Sucursal" HorizontalAlignment="Left" Margin="35,26,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.509,0.577"/>
+        <TextBox x:Name="txtNombreSucursal" HorizontalAlignment="Left" Height="26"  Width="436" Margin="107,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True"/>
+        <ComboBox x:Name="cbxCategoria" HorizontalAlignment="Left" Margin="107,62,0,0" VerticalAlignment="Top" Height="26"  Width="436" SelectionChanged="cbxCategoria_Seleccion"/>
+        <Label Content="Categoria" HorizontalAlignment="Left" Margin="35,62,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.509,0.577"/>
+        <ComboBox x:Name="cbxMarca" HorizontalAlignment="Left" Margin="107,93,0,0" VerticalAlignment="Top" Height="26"  Width="436" />
+        <Label Content="Marca" HorizontalAlignment="Left" Margin="35,93,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.509,0.577"/>
+        <ComboBox x:Name="cbxTipoProducto" HorizontalAlignment="Left" Margin="107,124,0,0" VerticalAlignment="Top" Height="26"  Width="436" />
+        <Label Content="Tipo Prod." HorizontalAlignment="Left" Margin="35,124,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.509,0.577"/>
+        <ComboBox x:Name="cbxProducto" HorizontalAlignment="Left" Margin="107,198,0,0" VerticalAlignment="Top" Height="26"  Width="336" SelectionChanged="cbxProducto_SelectionChanged" />
+        <Label Content="Producto" HorizontalAlignment="Left" Margin="35,198,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.509,0.577"/>
+        <Label Content="Cantidad" HorizontalAlignment="Left" Margin="35,229,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.509,0.577"/>
+        <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Height="26"  Width="56" Margin="107,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" TextChanged="txtCantidad_TextChanged" />
+        <Label Content="Valor Uni" HorizontalAlignment="Left" Margin="168,229,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.509,0.577"/>
+        <TextBox x:Name="txtValorUni" HorizontalAlignment="Left" Height="26"  Width="122" Margin="235,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True"/>
+        <Label Content="Valor Total" HorizontalAlignment="Left" Margin="357,229,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.806,0.462"/>
+        <TextBox x:Name="txtValorTotal" HorizontalAlignment="Left" Height="26"  Width="119" Margin="424,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True"/>
+        <Button x:Name="btnAgregarProd" Content="Agregar Productos" HorizontalAlignment="Left" Margin="234,272,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnAgregarProd_Click" />
+        <Button x:Name="btnFiltrarProductos" Content="Filtrar Productos" HorizontalAlignment="Left" Margin="35,160,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnFiltrarProductos_Click"  />
+        <Label Content="Stock" HorizontalAlignment="Left" Margin="448,198,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.806,0.462"/>
+        <TextBox x:Name="txtStock" HorizontalAlignment="Left" Height="26"  Width="52" Margin="491,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True"/>
+    </Grid>
+</Window>

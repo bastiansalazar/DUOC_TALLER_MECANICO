@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FB73E6A-EBE4-4133-989A-8AD672F47ED6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppServiexpress</RootNamespace>
+    <AssemblyName>AppServiexpress</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\bsalazar\Documents\Visual Studio 2017\SE_Intalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Serviexpress_icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AppServiexpress.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B3B623C5B01D2101FC3979BC40290FCE84FC7628</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AppServiexpress_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Ventanas\Boletas\EmitirBoleta_AD.xaml.cs">
+      <DependentUpon>EmitirBoleta_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\Manual\AYUDA_EmitirBoleta.xaml.cs">
+      <DependentUpon>AYUDA_EmitirBoleta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\Manual\AYUDA_RegistroVenta.xaml.cs">
+      <DependentUpon>AYUDA_RegistroVenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\Modal_Interno\AgregarOT.xaml.cs">
+      <DependentUpon>AgregarOT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\Modal_Interno\AgregarPRO.xaml.cs">
+      <DependentUpon>AgregarPRO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\Modal_Interno\AgregarSER.xaml.cs">
+      <DependentUpon>AgregarSER.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\ModificarVenta.xaml.cs">
+      <DependentUpon>ModificarVenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Boletas\RegistroVentas_AD.xaml.cs">
+      <DependentUpon>RegistroVentas_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\CategoriaProductos_AD.xaml.cs">
+      <DependentUpon>CategoriaProductos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Comuna_AD.xaml.cs">
+      <DependentUpon>Comuna_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Empresas_AD.xaml.cs">
+      <DependentUpon>Empresas_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Manual\AYUDA_Mantenedores.xaml.cs">
+      <DependentUpon>AYUDA_Mantenedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\MarcaProducto_AD.xaml.cs">
+      <DependentUpon>MarcaProducto_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\MarcasVehiculos_AD.xaml.cs">
+      <DependentUpon>MarcasVehiculos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Moneda_AD.xaml.cs">
+      <DependentUpon>Moneda_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Pais_AD.xaml.cs">
+      <DependentUpon>Pais_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Provincia.xaml.cs">
+      <DependentUpon>Provincia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Region_AD.xaml.cs">
+      <DependentUpon>Region_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\Sucursal_AD.xaml.cs">
+      <DependentUpon>Sucursal_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\TipodeServicio_AD.xaml.cs">
+      <DependentUpon>TipodeServicio_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mantenedores\TipoProducto_AD.xaml.cs">
+      <DependentUpon>TipoProducto_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\EmitirDevolucion_AD.xaml.cs">
+      <DependentUpon>EmitirDevolucion_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\EmitirPedido_AD.xaml.cs">
+      <DependentUpon>EmitirPedido_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\IngresarRecepcion_AD.xaml.cs">
+      <DependentUpon>IngresarRecepcion_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Manual\AYUDA_EmitirDevolucion.xaml.cs">
+      <DependentUpon>AYUDA_EmitirDevolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Manual\AYUDA_EmitirPedido.xaml.cs">
+      <DependentUpon>AYUDA_EmitirPedido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Manual\AYUDA_IngresarRecepcion.xaml.cs">
+      <DependentUpon>AYUDA_IngresarRecepcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Manual\AYUDA_ModificarPedido.xaml.cs">
+      <DependentUpon>AYUDA_ModificarPedido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos.xaml.cs">
+      <DependentUpon>AgregarProductosPedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos2.xaml.cs">
+      <DependentUpon>AgregarProductosPedidos2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos3.xaml.cs">
+      <DependentUpon>AgregarProductosPedidos3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\ModificarPedido2_AD.xaml.cs">
+      <DependentUpon>ModificarPedido2_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Pedidos\ModificarPedido_AD.xaml.cs">
+      <DependentUpon>ModificarPedido_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Productos\IngresarProductos_AD.xaml.cs">
+      <DependentUpon>IngresarProductos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Productos\Manual\AYUDA_IngresarProducto.xaml.cs">
+      <DependentUpon>AYUDA_IngresarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Productos\Manual\AYUDA_ModificarProducto.xaml.cs">
+      <DependentUpon>AYUDA_ModificarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Productos\ModificarProductos_AD.xaml.cs">
+      <DependentUpon>ModificarProductos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\FinalizarRequerimientos_AD.xaml.cs">
+      <DependentUpon>FinalizarRequerimientos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\IngresarRequerimientos_AD.xaml.cs">
+      <DependentUpon>IngresarRequerimientos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Manual\AYUDA_FinalizarRequerimiento.xaml.cs">
+      <DependentUpon>AYUDA_FinalizarRequerimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Manual\AYUDA_IngresarRequerimiento.xaml.cs">
+      <DependentUpon>AYUDA_IngresarRequerimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Manual\AYUDA_ModificarRequerimiento.xaml.cs">
+      <DependentUpon>AYUDA_ModificarRequerimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Modal_Interno\AgregarProductoReuqerimiento2.xaml.cs">
+      <DependentUpon>AgregarProductoReuqerimiento2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Modal_Interno\AgregarProductosRequerimieto.xaml.cs">
+      <DependentUpon>AgregarProductosRequerimieto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Modal_Interno\AgregarServicioRequerimiento2.xaml.cs">
+      <DependentUpon>AgregarServicioRequerimiento2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Modal_Interno\AgregarServiciosRequerimiento.xaml.cs">
+      <DependentUpon>AgregarServiciosRequerimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\Modal_Interno\AgregarServiciosRequerimientos3.xaml.cs">
+      <DependentUpon>AgregarServiciosRequerimientos3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\ModificarRequerimientos2.xaml.cs">
+      <DependentUpon>ModificarRequerimientos2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Requerimientos\ModificarRequerimientos_AD.xaml.cs">
+      <DependentUpon>ModificarRequerimientos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Taller\AdministrarServicios_AD.xaml.cs">
+      <DependentUpon>AdministrarServicios_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Taller\AdministrarVehiculos_AD.xaml.cs">
+      <DependentUpon>AdministrarVehiculos_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Taller\Manual\AYUDA_AdministrarServicios.xaml.cs">
+      <DependentUpon>AYUDA_AdministrarServicios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Taller\Manual\AYUDA_AdministrarVehiculos.xaml.cs">
+      <DependentUpon>AYUDA_AdministrarVehiculos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\AdministrarPersonas_AD.xaml.cs">
+      <DependentUpon>AdministrarPersonas_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\AdministrarUsuarios_AD.xaml.cs">
+      <DependentUpon>AdministrarUsuarios_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\Manual\AYUDA_AdministradorUsuarios.xaml.cs">
+      <DependentUpon>AYUDA_AdministradorUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\Manual\AYUDA_RegistroClientes.xaml.cs">
+      <DependentUpon>AYUDA_RegistroClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\Manual\AYUDA_RegistroEmpleados.xaml.cs">
+      <DependentUpon>AYUDA_RegistroEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\Manual\AYUDA_RegistroPersonas.xaml.cs">
+      <DependentUpon>AYUDA_RegistroPersonas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\Manual\AYUDA_RegistroProveedores.xaml.cs">
+      <DependentUpon>AYUDA_RegistroProveedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\Modal_Interno\CargarPersona.xaml.cs">
+      <DependentUpon>CargarPersona.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\RegistroEmpleados_AD.xaml.cs">
+      <DependentUpon>RegistroEmpleados_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\RegistroProveedores_AD.xaml.cs">
+      <DependentUpon>RegistroProveedores_AD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Usuarios\ResgistroClientes_AD.xaml.cs">
+      <DependentUpon>ResgistroClientes_AD.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Ventanas\Boletas\EmitirBoleta_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\Manual\AYUDA_EmitirBoleta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\Manual\AYUDA_RegistroVenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\Modal_Interno\AgregarOT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\Modal_Interno\AgregarPRO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\Modal_Interno\AgregarSER.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\ModificarVenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Boletas\RegistroVentas_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Inicio\Inicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Inicio\Inicio.xaml.cs">
+      <DependentUpon>Inicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Ventanas\Mantenedores\CategoriaProductos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Comuna_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Empresas_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Manual\AYUDA_Mantenedores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\MarcaProducto_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\MarcasVehiculos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Moneda_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Pais_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Provincia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Region_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\Sucursal_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\TipodeServicio_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Mantenedores\TipoProducto_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\EmitirDevolucion_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\EmitirPedido_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\IngresarRecepcion_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Manual\AYUDA_EmitirDevolucion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Manual\AYUDA_EmitirPedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Manual\AYUDA_IngresarRecepcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Manual\AYUDA_ModificarPedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\ModificarPedido2_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Pedidos\ModificarPedido_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Productos\IngresarProductos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Productos\Manual\AYUDA_IngresarProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Productos\Manual\AYUDA_ModificarProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Productos\ModificarProductos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\FinalizarRequerimientos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\IngresarRequerimientos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Manual\AYUDA_FinalizarRequerimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Manual\AYUDA_IngresarRequerimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Manual\AYUDA_ModificarRequerimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Modal_Interno\AgregarProductoReuqerimiento2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Modal_Interno\AgregarProductosRequerimieto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Modal_Interno\AgregarServicioRequerimiento2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Modal_Interno\AgregarServiciosRequerimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\Modal_Interno\AgregarServiciosRequerimientos3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\ModificarRequerimientos2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Requerimientos\ModificarRequerimientos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Taller\AdministrarServicios_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Taller\AdministrarVehiculos_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Taller\Manual\AYUDA_AdministrarServicios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Taller\Manual\AYUDA_AdministrarVehiculos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\AdministrarPersonas_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\AdministrarUsuarios_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\Manual\AYUDA_AdministradorUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\Manual\AYUDA_RegistroClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\Manual\AYUDA_RegistroEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\Manual\AYUDA_RegistroPersonas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\Manual\AYUDA_RegistroProveedores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\Modal_Interno\CargarPersona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\RegistroEmpleados_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\RegistroProveedores_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Usuarios\ResgistroClientes_AD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="AppServiexpress_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\Serviexpress_icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\Serviexpress_icono2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Serviexpress_icono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BBCServiexpress.DAL\BBCServiexpress.DAL.csproj">
+      <Project>{AD95320A-13F3-4D6D-B68C-762DB05DF48E}</Project>
+      <Name>BBCServiexpress.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BBCServiexpress.NEG\BBCServiexpress.NEG.csproj">
+      <Project>{2af9cad6-de34-42de-a4c1-3239140aa527}</Project>
+      <Name>BBCServiexpress.NEG</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\baner.jpg" />
+    <Resource Include="Contenidos\Imagenes\login-fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\Serviexpress_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\excel.jpg" />
+    <Resource Include="Contenidos\Imagenes\ico-descarga-pdf.png" />
+    <Resource Include="Contenidos\Imagenes\Word-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contenidos\Imagenes\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Word-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="excel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ManualEnLinea\Usuarios_RegistroPersonas.html" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

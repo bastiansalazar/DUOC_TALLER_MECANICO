@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD95320A-13F3-4D6D-B68C-762DB05DF48E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BBCServiexpress.DAL</RootNamespace>
+    <AssemblyName>BBCServiexpress.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnulacionVentasDAL.cs" />
+    <Compile Include="ANULACION_VENTA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriasDAL.cs" />
+    <Compile Include="CLIENTE.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesDAL.cs" />
+    <Compile Include="COMUNA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComunaDAL.cs" />
+    <Compile Include="ControlRecepcionDAL.cs" />
+    <Compile Include="CONTROL_RECEPCION.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleControlRecepcionDAL.cs" />
+    <Compile Include="DetalleOrdenPedidoDAL.cs" />
+    <Compile Include="DETALLE_ANULACION_VENTA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLE_CONTROL_RECEPCION.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLE_ORDEN_PEDIDO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLE_VENTAS.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIAGNOSTICO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosticoDAL.cs" />
+    <Compile Include="EMPLEADO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadosDAL.cs" />
+    <Compile Include="ESTADO_CLIENTE.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_CONTROL_RECEPCION.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_EMPLEADO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_EMPRESA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_ORDEN_PEDIDO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_PERSONA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_PRODUCTO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_PROVEEDOR.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_RECEPCION.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_RESERVA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_SERVICIO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_SERVICIO_X_DIAGNOSTICO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_SUCURSAL.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_USUARIO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MARCA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MarcasDAL.cs" />
+    <Compile Include="MarcasVehiculosDAL.cs" />
+    <Compile Include="MARCA_VEHICULO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelServiexpress.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelServiexpress.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelServiexpress.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelServiexpress.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelServiexpress.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiEmpresaDAL.cs" />
+    <Compile Include="MultiMonedaDAL.cs" />
+    <Compile Include="MULTI_EMPRESA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MULTI_MONEDA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenPedidoDAL.cs" />
+    <Compile Include="ORDEN_PEDIDO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAIS.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaisDAL.cs" />
+    <Compile Include="PERSONA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaDAL.cs" />
+    <Compile Include="PRODUCTO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosDAL.cs" />
+    <Compile Include="PRODUCTOS_X_DIAGNOSTICO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROVEEDOR.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresDAL.cs" />
+    <Compile Include="PROVINCIA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProvinciaDAL.cs" />
+    <Compile Include="REGION.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegionDAL.cs" />
+    <Compile Include="RequerimeintoDAL.cs" />
+    <Compile Include="ReservaDAL.cs" />
+    <Compile Include="RESERVA_HORA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVICIO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiciosDAL.cs" />
+    <Compile Include="SERVICIOS_X_DIAGNOSTICO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUCURSAL.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SucursalDAL.cs" />
+    <Compile Include="TipoProductoDAL.cs" />
+    <Compile Include="TipoServicioDAL.cs" />
+    <Compile Include="Tipos_EstadosDAL.cs" />
+    <Compile Include="TIPO_EMPLEADO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_ORDEN_PEDIDO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_PERSONA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_PRODUCTO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_PROVEEDOR.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_RESERVA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_SERVICIO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_USUARIO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_VEHICULO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_VENTA.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="VEHICULO.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculosDAL.cs" />
+    <Compile Include="VENTAS.cs">
+      <DependentUpon>ModelServiexpress.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasDAL.cs" />
+    <Compile Include="Vistas\ClienteVIEW.cs" />
+    <Compile Include="Vistas\ControlRecepcionVIEW.cs" />
+    <Compile Include="Vistas\DatosDocumentoPagoVIEW.cs" />
+    <Compile Include="Vistas\DetalleBoletaVIEW.cs" />
+    <Compile Include="Vistas\EmpleadosVIEW.cs" />
+    <Compile Include="Vistas\FolioView.cs" />
+    <Compile Include="Vistas\OrdenPedidoVIEW.cs" />
+    <Compile Include="Vistas\PersonaVIEW.cs" />
+    <Compile Include="Vistas\ProductosVIEW.cs" />
+    <Compile Include="Vistas\ProductosXDiagnostico.cs" />
+    <Compile Include="Vistas\ProveedoresVIEW.cs" />
+    <Compile Include="Vistas\ReservaVIEW.cs" />
+    <Compile Include="Vistas\ServiciosVIEW.cs" />
+    <Compile Include="Vistas\ServiciosXDiagnosticoVIEW.cs" />
+    <Compile Include="Vistas\UsuariosVIEW.cs" />
+    <Compile Include="Vistas\VehiculosVIEW.cs" />
+    <Compile Include="Vistas\VentasVIEW.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="ModelServiexpress.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelServiexpress.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelServiexpress.edmx.diagram">
+      <DependentUpon>ModelServiexpress.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelServiexpress.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelServiexpress.edmx</DependentUpon>
+      <LastGenOutput>ModelServiexpress.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelServiexpress.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelServiexpress.edmx</DependentUpon>
+      <LastGenOutput>ModelServiexpress.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

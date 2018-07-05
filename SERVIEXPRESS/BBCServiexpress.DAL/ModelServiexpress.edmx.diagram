@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d648df86dea4cdeaffb08944dc3bd46" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="ModelServiexpress.ANULACION_VENTA" Width="1.5" PointX="12.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.CATEGORIA" Width="1.5" PointX="13.5" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.CLIENTE" Width="1.5" PointX="7.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.COMUNA" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.CONTROL_RECEPCION" Width="1.5" PointX="12.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.DETALLE_ANULACION_VENTA" Width="1.5" PointX="18" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.DETALLE_CONTROL_RECEPCION" Width="1.5" PointX="15" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.DETALLE_ORDEN_PEDIDO" Width="1.5" PointX="18" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.DETALLE_VENTAS" Width="1.5" PointX="21" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.DIAGNOSTICO" Width="1.5" PointX="20.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.EMPLEADO" Width="1.5" PointX="10.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_CLIENTE" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_CONTROL_RECEPCION" Width="1.5" PointX="10.5" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_EMPLEADO" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_EMPRESA" Width="1.5" PointX="0.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_ORDEN_PEDIDO" Width="1.5" PointX="13.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_PERSONA" Width="1.5" PointX="3" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_PRODUCTO" Width="1.5" PointX="13.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_PROVEEDOR" Width="1.5" PointX="11.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_RECEPCION" Width="1.5" PointX="12.75" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_RESERVA" Width="1.5" PointX="15.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_SERVICIO" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_SUCURSAL" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_USUARIO" Width="1.5" PointX="5.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.MARCA" Width="1.5" PointX="13.5" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.MARCA_VEHICULO" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.MULTI_EMPRESA" Width="1.5" PointX="3" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.MULTI_MONEDA" Width="1.5" PointX="13.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.ORDEN_PEDIDO" Width="1.5" PointX="15.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.PAIS" Width="1.5" PointX="1.5" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.PERSONA" Width="1.5" PointX="5.25" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.PRODUCTO" Width="1.5" PointX="15.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.PROVEEDOR" Width="1.5" PointX="13.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.PROVINCIA" Width="1.5" PointX="0.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.REGION" Width="1.5" PointX="1.5" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.RESERVA_HORA" Width="1.5" PointX="18" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.SERVICIO" Width="1.875" PointX="7.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.SUCURSAL" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_EMPLEADO" Width="1.5" PointX="8.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_ORDEN_PEDIDO" Width="1.5" PointX="13.5" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_PERSONA" Width="1.5" PointX="3" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_PROVEEDOR" Width="1.5" PointX="11.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_RESERVA" Width="1.5" PointX="15.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_SERVICIO" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_USUARIO" Width="1.5" PointX="5.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_VEHICULO" Width="1.5" PointX="10.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_VENTA" Width="1.5" PointX="13.5" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.USUARIO" Width="1.5" PointX="7.5" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.VEHICULO" Width="1.5" PointX="12.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelServiexpress.VENTAS" Width="1.5" PointX="15.75" PointY="17" IsExpanded="true" />
+        <AssociationConnector Association="ModelServiexpress.FKAQ7O0YIXXM0ISM70YVJI1PK75" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKBSAO1KAFBHW2WLQUEQ7HTT9L6" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKEUCF07L8HLCRJKI4TTOAVB07M" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKHDTC29L4PV8K5EHU78JNLVK0X" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKODQR7965OK9RWQUJ1UTIAMT0M" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK1N4QIHKDGR0HFUV13HBLTWDN8" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK6HHDNJHS8H4C30F77LCUG51XI" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKCL8NIJ0QMAAXKK9TP9WHQWTR8" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKH93RTESJD4S5TUFO85HE1NXB9" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKMC52UPYWN8GONA2IIWWWPHB92" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKSI9IWVD2W6A4JOLIVBXWYIAY2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKESKQ277UF527HBRP9YK1YTJ2P" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKJ6RCYFDLJGJYRVA4REPF2LYRT" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKGR10WNIAHO2C3CVAWCK6HHHBK" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKICLGLXRQQJSX1VGNY3WAX26X9" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKIUBNBU90Y5KHO8CK5QFFF1ESG" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKLP4P1WF0T6XTDVT2KWW3DYYRC" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK91J3QHPHMO16TV2Y6GJFYGH7T" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKCAGMNJBLHLUHQY70PK72RBB5Y" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK2BKMYKFXF2TC42BFD7M0B8B4L" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK36IFL9DHEJC2V9YLE2RX1OC22" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKYY0RI2TQJFHYSV4RTFA6OIMV" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK5QD6TBO9W0D3ICU2UN0VSQVY5" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKL2IXK4TM1YAI0YMJKUQJHVONA" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKRTVHUTDBNDGHIR0QRAQL4P8RX" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKM7FYCJ8KLS21MEDF66DEQSPGD" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKNDDCXGQBB9WSWPXLP9BYI1X3S" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKOVG4LQ1XM42WIQL8KVBH9IOHX" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKQI03FUOUSTM28VJUNBX48RD8O" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK6U5DMFUIQ6QP62LVYCOQ3CX8H" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKETQ6MJG40LPYMJYVUO2QS897I" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK7FG8BXL4VV0J8P1GOMAVJ0B7B" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKC6TF68TU3H3Y79CYOAWN0SSYC" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKDHBBR9AELOPF2VXIL3QH9D0D" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKE8EBFJIHFWCXL7U3U5PAU1BQV" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKGXXYNBNJ72KX357DFLIBJYWYH" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKKV68LX8XPBPV6JPRH7TAIEAEJ" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKPLBVT711LMGFN44QWDOY22GAA" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKLPGGIC21L2UK2LBTVERKGHM0Y" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKM9ALUF81N2R4S2W46F5HYYBW0" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKLWBI0JS1RQO3OOUE0NH88QV14" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK7K8BIAV1BW5AGANCHSQVC4MKI" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK79JMQT0XKS2C89OPFDH1E6537" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKFKWY3DV4V0IJ7NI2TNWPET99L" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKR2J84559QQ5PUEGPR2F6CILJJ" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKDSKU2QQVHDPB2ILEV4X7XQ1EY" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK13BJPLSLCVK1QM23G92S7HHI0" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK868TNRT85F21KGCVT9BFTGR8R" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK91021P3MEDJ6H2YOWQE0TDAB0" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKDB0QYM6LAM5PSK6TRHCGE4W4U" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK6UQJ6JBOSLF16W3XT1MGJ1VX2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKQEYEG1VY7Y1XRQ4EIM55SQVIU" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK5VG2BGYNAGEBLIQEP88S2V3UX" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKD91B8LUUQWQ0M5HWOMVI1EBP" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKKKYJ1195J6DQKUR9B6N2K0VE8" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK284QA77U9V2I4YOXA7HK7OC4Y" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK81D03XPQ8NJPLLG5GS7OJDV0S" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKLSE7LQGHMT3R1SP298SS9S5BC" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKXXG7SG5RMF6YP09MN7J67MAS" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKOCX16YP92RCJ8QRYDY0RBN19S" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKHPHYLNAMS6QJC4N5AI5JSADPT" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK6Y4WNBKQGEAP0GRAKKXWCV3GI" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKBLHCMVDDSKGQ587WDPRAGAXE2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKRY4EGBLY0XB44D6VJM49TDEUS" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK5G48YC2SR5ECKS0AY9LEESUV2" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKLM8CP4Q758MJ7SDCO46S9K4PO" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKIAAUYNEFN97K8NL88SS4SNYL6" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKSQB4V6E40JC5VT3L5BXYEL4FI" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FKE581TP719P3D7O5U2W9SRE10B" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK8SI429JG12XPNU65GSN2A1R44" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelServiexpress.FK43Q46AAFMAESGN7S00APA1CTY" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ModelServiexpress.TIPO_PRODUCTO" Width="1.875" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ModelServiexpress.ESTADO_SERVICIO_X_DIAGNOSTICO" Width="2.375" PointX="3.125" PointY="0.75" />
+        <EntityTypeShape EntityType="ModelServiexpress.PRODUCTOS_X_DIAGNOSTICO" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ModelServiexpress.SERVICIOS_X_DIAGNOSTICO" Width="1.5" PointX="2.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

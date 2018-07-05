@@ -1,0 +1,13 @@
+﻿<Window x:Class="AppServiexpress.Ventanas.Usuarios.Manual.AYUDA_RegistroEmpleados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress.Ventanas.Usuarios.Manual"
+        mc:Ignorable="d"
+        Title="Ayuda en Linea" Height="450" Width="550">
+    <Grid>
+        <WebBrowser Source="file:///C:/Serviexpress/AppServiexpress/ManualEnLinea/Usuarios_RegistroEmpleados.html"  HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="522"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppServiexpress", "AppServiexpress\AppServiexpress.csproj", "{9FB73E6A-EBE4-4133-989A-8AD672F47ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBCServiexpress.DAL", "BBCServiexpress.DAL\BBCServiexpress.DAL.csproj", "{AD95320A-13F3-4D6D-B68C-762DB05DF48E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBCServiexpress.NEG", "BBCServiexpress.NEG\BBCServiexpress.NEG.csproj", "{2AF9CAD6-DE34-42DE-A4C1-3239140AA527}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = Sistema que facilita la administración de los servicios prestados por un taller mecánico
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FB73E6A-EBE4-4133-989A-8AD672F47ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB73E6A-EBE4-4133-989A-8AD672F47ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB73E6A-EBE4-4133-989A-8AD672F47ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB73E6A-EBE4-4133-989A-8AD672F47ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD95320A-13F3-4D6D-B68C-762DB05DF48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD95320A-13F3-4D6D-B68C-762DB05DF48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD95320A-13F3-4D6D-B68C-762DB05DF48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD95320A-13F3-4D6D-B68C-762DB05DF48E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF9CAD6-DE34-42DE-A4C1-3239140AA527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF9CAD6-DE34-42DE-A4C1-3239140AA527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF9CAD6-DE34-42DE-A4C1-3239140AA527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF9CAD6-DE34-42DE-A4C1-3239140AA527}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0B53CF3-CD37-43B4-8543-C2B3AC8F65BC}
+	EndGlobalSection
+EndGlobal

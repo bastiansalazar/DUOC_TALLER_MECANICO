@@ -1,0 +1,20 @@
+﻿AppServiexpress
+
+
+winexe
+C#
+.cs
+C:\Users\Informatica\Desktop\Proyecto SERVIEXPRESS_v15\AppServiexpress\obj\Debug\
+AppServiexpress
+none
+false
+DEBUG;TRACE
+C:\Users\Informatica\Desktop\Proyecto SERVIEXPRESS_v15\AppServiexpress\App.xaml
+66-1979089004
+1-1464686308
+74-99925207
+201511441829
+Ventanas\Boletas\EmitirBoleta_AD.xaml;Ventanas\Boletas\Manual\AYUDA_EmitirBoleta.xaml;Ventanas\Boletas\Manual\AYUDA_RegistroVenta.xaml;Ventanas\Boletas\Modal_Interno\AgregarOT.xaml;Ventanas\Boletas\Modal_Interno\AgregarPRO.xaml;Ventanas\Boletas\Modal_Interno\AgregarSER.xaml;Ventanas\Boletas\ModificarVenta.xaml;Ventanas\Boletas\RegistroVentas_AD.xaml;Ventanas\Inicio\Inicio.xaml;MainWindow.xaml;Ventanas\Mantenedores\CategoriaProductos_AD.xaml;Ventanas\Mantenedores\Comuna_AD.xaml;Ventanas\Mantenedores\Empresas_AD.xaml;Ventanas\Mantenedores\Manual\AYUDA_Mantenedores.xaml;Ventanas\Mantenedores\MarcaProducto_AD.xaml;Ventanas\Mantenedores\MarcasVehiculos_AD.xaml;Ventanas\Mantenedores\Moneda_AD.xaml;Ventanas\Mantenedores\Pais_AD.xaml;Ventanas\Mantenedores\Provincia.xaml;Ventanas\Mantenedores\Region_AD.xaml;Ventanas\Mantenedores\Sucursal_AD.xaml;Ventanas\Mantenedores\TipodeServicio_AD.xaml;Ventanas\Mantenedores\TipoProducto_AD.xaml;Ventanas\Pedidos\EmitirDevolucion_AD.xaml;Ventanas\Pedidos\EmitirPedido_AD.xaml;Ventanas\Pedidos\IngresarRecepcion_AD.xaml;Ventanas\Pedidos\Manual\AYUDA_EmitirDevolucion.xaml;Ventanas\Pedidos\Manual\AYUDA_EmitirPedido.xaml;Ventanas\Pedidos\Manual\AYUDA_IngresarRecepcion.xaml;Ventanas\Pedidos\Manual\AYUDA_ModificarPedido.xaml;Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos.xaml;Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos2.xaml;Ventanas\Pedidos\Modal_Interno\AgregarProductosPedidos3.xaml;Ventanas\Pedidos\ModificarPedido2_AD.xaml;Ventanas\Pedidos\ModificarPedido_AD.xaml;Ventanas\Productos\IngresarProductos_AD.xaml;Ventanas\Productos\Manual\AYUDA_IngresarProducto.xaml;Ventanas\Productos\Manual\AYUDA_ModificarProducto.xaml;Ventanas\Productos\ModificarProductos_AD.xaml;Ventanas\Requerimientos\FinalizarRequerimientos_AD.xaml;Ventanas\Requerimientos\IngresarRequerimientos_AD.xaml;Ventanas\Requerimientos\Manual\AYUDA_FinalizarRequerimiento.xaml;Ventanas\Requerimientos\Manual\AYUDA_IngresarRequerimiento.xaml;Ventanas\Requerimientos\Manual\AYUDA_ModificarRequerimiento.xaml;Ventanas\Requerimientos\Modal_Interno\AgregarProductoReuqerimiento2.xaml;Ventanas\Requerimientos\Modal_Interno\AgregarProductosRequerimieto.xaml;Ventanas\Requerimientos\Modal_Interno\AgregarServicioRequerimiento2.xaml;Ventanas\Requerimientos\Modal_Interno\AgregarServiciosRequerimiento.xaml;Ventanas\Requerimientos\Modal_Interno\AgregarServiciosRequerimientos3.xaml;Ventanas\Requerimientos\ModificarRequerimientos2.xaml;Ventanas\Requerimientos\ModificarRequerimientos_AD.xaml;Ventanas\Taller\AdministrarServicios_AD.xaml;Ventanas\Taller\AdministrarVehiculos_AD.xaml;Ventanas\Taller\Manual\AYUDA_AdministrarServicios.xaml;Ventanas\Taller\Manual\AYUDA_AdministrarVehiculos.xaml;Ventanas\Usuarios\AdministrarPersonas_AD.xaml;Ventanas\Usuarios\AdministrarUsuarios_AD.xaml;Ventanas\Usuarios\Manual\AYUDA_AdministradorUsuarios.xaml;Ventanas\Usuarios\Manual\AYUDA_RegistroClientes.xaml;Ventanas\Usuarios\Manual\AYUDA_RegistroEmpleados.xaml;Ventanas\Usuarios\Manual\AYUDA_RegistroPersonas.xaml;Ventanas\Usuarios\Manual\AYUDA_RegistroProveedores.xaml;Ventanas\Usuarios\Modal_Interno\CargarPersona.xaml;Ventanas\Usuarios\RegistroEmpleados_AD.xaml;Ventanas\Usuarios\RegistroProveedores_AD.xaml;Ventanas\Usuarios\ResgistroClientes_AD.xaml;
+
+False
+

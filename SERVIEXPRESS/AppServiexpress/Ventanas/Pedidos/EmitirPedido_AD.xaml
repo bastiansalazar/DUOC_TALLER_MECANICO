@@ -1,0 +1,61 @@
+﻿<Window x:Class="AppServiexpress.Ventanas.Pedidos.EmitirPedido_AD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppServiexpress.Ventanas.Pedidos"
+        mc:Ignorable="d"
+        Title="Emitir Pedido Productos" Height="650" Width="1078" WindowStartupLocation="CenterScreen" Icon="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_icono2.png" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="337*"/>
+            <ColumnDefinition Width="732*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <SolidColorBrush Color="#FF1834E6" Opacity="0.3"/>
+        </Grid.Background>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="589" Margin="90,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="802" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="580.5,35,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnLimpiar_Click" Grid.Column="1" />
+        <Label Content="" HorizontalAlignment="Left" Margin="221.5,394,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Grid Margin="113,35,176,20" Grid.ColumnSpan="2">
+            <Image HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="147" Source="/AppServiexpress;component/Contenidos/Imagenes/Serviexpress_logo.png"/>
+            <Label Content="ORDEN DE PEDIDO" HorizontalAlignment="Left" Margin="330,42,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="144"/>
+            <Label Content="FOLIO:" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="54" RenderTransformOrigin="0.509,0.577"/>
+            <TextBox x:Name="txtFolio" Text="00000000" HorizontalAlignment="Left" Height="26"  Width="70" Margin="685,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" MaxLength="9" IsReadOnly="True" TextAlignment="Right" />
+            <Label Content="Proveedor:" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Rol:" HorizontalAlignment="Left" Margin="503,87,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Fecha Ingreso Solicitud:" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="137" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Fecha Modificación Solicitud:" HorizontalAlignment="Left" Margin="323,115,0,0" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Sucursal:" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Dirección:" HorizontalAlignment="Left" Margin="330,146,0,0" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.509,0.577"/>
+            <DataGrid x:Name="dgProductos" HorizontalAlignment="Left" Height="200" Margin="0,227,0,0" VerticalAlignment="Top" Width="767" MaxWidth="767" />
+            <Label Content="COSTO TOTAL $" HorizontalAlignment="Left" Margin="542,432,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.509,0.577"/>
+            <TextBox x:Name="txtCostoTotal" HorizontalAlignment="Left" Height="26"  Width="129" Margin="638,432,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" IsReadOnly="True" TextAlignment="Right" />
+            <Label Content="COSTO TOTAL SEGUN MONEDA $" HorizontalAlignment="Left" Margin="444,463,0,0" VerticalAlignment="Top" Width="191" RenderTransformOrigin="0.509,0.577"/>
+            <TextBox x:Name="txtCostoMoneda" HorizontalAlignment="Left" Height="26"  Width="129" Margin="638,463,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" IsReadOnly="True" TextAlignment="Right" />
+            <Label Content="Moneda:" HorizontalAlignment="Left" Margin="10,463,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Empleado Solicitante:" HorizontalAlignment="Left" Margin="10,494,0,0" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Email Proveedor:" HorizontalAlignment="Left" Margin="10,525,0,-3" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.509,0.577"/>
+            <Label Content="Email Sucursal:" HorizontalAlignment="Left" Margin="234,196,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.509,0.577"/>
+        </Grid>
+        <ComboBox x:Name="cbxProveedor" HorizontalAlignment="Left" Margin="196,121,0,0" VerticalAlignment="Top" Height="26"  Width="419" SelectionChanged="cbxProveedor_Seleccion" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtRutProveedor" HorizontalAlignment="Left" Height="26"  Width="231" Margin="312.5,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True" Grid.Column="1"/>
+        <DatePicker x:Name="dpkFechaCreacion" HorizontalAlignment="Left" Margin="257,152,0,0" VerticalAlignment="Top" Height="26"  Width="168" IsEnabled="False" Grid.ColumnSpan="2" />
+        <DatePicker x:Name="dpkFechaModificacion" HorizontalAlignment="Left" Margin="264.5,152,0,0" VerticalAlignment="Top" Height="26"  Width="168" IsEnabled="False" Grid.Column="1"  />
+        <ComboBox x:Name="cbxSucursal" HorizontalAlignment="Left" Margin="181,183,0,0" VerticalAlignment="Top" Height="26"  Width="258" SelectionChanged="cbxSucursal_Seleccion" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Height="40"  Width="367" Margin="171.5,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True" Grid.Column="1"/>
+        <TextBox x:Name="txtTelFijo" HorizontalAlignment="Left" Height="26" Margin="181,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" VerticalContentAlignment="Center" MaxLength="9"/>
+        <ComboBox x:Name="cbxMoneda" HorizontalAlignment="Left" Margin="181,498,0,0" VerticalAlignment="Top" Height="26"  Width="196" SelectionChanged="cbxMoneda_Seleccion" Grid.ColumnSpan="2" />
+        <ComboBox x:Name="cbxEmpleado" HorizontalAlignment="Left" Margin="243,529,0,0" VerticalAlignment="Top" Height="26"  Width="196" SelectionChanged="cbxEmpleado_Seleccion" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtNombreEmpleado" HorizontalAlignment="Left" Height="26"  Width="431" Margin="112.5,529,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" CharacterCasing="Upper" MaxLength="48" IsReadOnly="True" Grid.Column="1"/>
+        <TextBox x:Name="txtEmailProveedor" HorizontalAlignment="Left" Height="26"  Width="651" Margin="229,560,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" MaxLength="48" Grid.ColumnSpan="2" />
+        <TextBox x:Name="txtEmailSucursal" HorizontalAlignment="Left" Height="26"  Width="436" Margin="102.5,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center"  MaxLength="48" Grid.Column="1" />
+        <Button x:Name="btnIngresar" Content="Ingresar Orden" HorizontalAlignment="Left" Margin="580.5,191,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnIngresar_Click" Grid.Column="1" />
+        <Button x:Name="btnAgregaProducto" Content="Agregar Productos" HorizontalAlignment="Left" Margin="580.5,97,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnAgregaProducto_Click" Grid.Column="1" />
+        <Button x:Name="btnQuitarProducto" Content="Quitar Productos" HorizontalAlignment="Left" Margin="580.5,128,0,0" VerticalAlignment="Top" Width="123" Height="26" Click="btnQuitarProducto_Click" Grid.Column="1"  />
+        <Button x:Name="bntAyuda" Content="AYUDA" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="46" Height="20" Click="bntAyuda_Click" />
+
+    </Grid>
+</Window>
